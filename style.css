@@ -329,15 +329,13 @@ p {
 
 @media (max-width: 768px) {
   .hero {
-    padding: 120px 30px 80px;
-    gap: 48px;
+    padding: 100px 30px 80px;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    padding: 120px 20px 60px;
-    gap: 40px;
+    padding: 100px 20px 60px;
   }
 }
 

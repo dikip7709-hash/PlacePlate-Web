@@ -417,6 +417,19 @@ p {
 .hero-headline.animated .word {
   animation: wordReveal 0.8s ease-out forwards;
 }
+@media (max-width:768px){
+  .hero-headline .word {
+  display: inline-block;
+  opacity: 1;
+  transform: translateY(0px);
+  filter: blur(0px);
+  animation: none;
+}
+
+.hero-headline.animated .word {
+  animation: none;
+}
+}
 
 .hero-subheadline {
   color: #ffffff;
@@ -616,6 +629,20 @@ p {
 
 .banner-title.animated .word {
   animation: wordReveal 0.8s ease-out forwards;
+}
+
+@media(max-width:768px){
+  .banner-title .word {
+  display: inline-block;
+  opacity: 1;
+  transform: translateY(0px);
+  filter: blur(0px);
+  animation: none;
+}
+
+.banner-title.animated .word {
+  animation: none;
+}
 }
 
 @keyframes wordReveal {
@@ -922,7 +949,19 @@ p {
 .footer-cta-headline.animated .word {
   animation: wordReveal 0.8s ease-out forwards;
 }
+@media(max-width:768px){
+  .footer-cta-headline .word {
+  display: inline-block;
+  opacity: 1;
+  transform: translateY(0px);
+  filter: blur(0px);
+  animation: none;
+}
 
+.footer-cta-headline.animated .word {
+  animation: none;
+}
+}
 .footer-cta-subheadline {
   color: white;
 }

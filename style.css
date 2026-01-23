@@ -336,7 +336,7 @@ p {
 
 @media (max-width: 480px) {
   .hero {
-    padding: 100px 20px 60px;
+    padding: 120px 20px 60px;
     gap: 40px;
   }
 }
@@ -430,6 +430,19 @@ p {
 
 .hero-headline.animated .word {
   animation: wordReveal 0.8s ease-out forwards;
+}
+@media (max-width:768px){
+  .hero-headline .word {
+  display: inline-block;
+  opacity: 1;
+  transform: translateY(0px);
+  filter: blur(0px);
+  animation: none;
+}
+
+.hero-headline.animated .word {
+  animation: none;
+}
 }
 
 .hero-subheadline {
@@ -590,6 +603,21 @@ p {
 /* Trigger animation when banner is visible */
 .banner-title.animated .word {
   animation: wordReveal 0.8s ease-out forwards;
+}
+@media (max-width:768px){
+  .banner-title .word {
+  display: inline-block;
+  opacity: 1;
+  transform: translateY(0px);
+  filter: blur(0px);
+  /* Animation paused until section is in view */
+  animation: none;
+}
+
+/* Trigger animation when banner is visible */
+.banner-title.animated .word {
+  animation: none;
+}
 }
 
 @keyframes wordReveal {
@@ -1020,14 +1048,14 @@ p {
 @media (max-width: 768px) {
   .footer-cta {
     min-height: 600px;
-    padding: 80px 30px;
+    padding: 150px 30px;
   }
 }
 
 @media (max-width: 480px) {
   .footer-cta {
     min-height: 500px;
-    padding: 60px 20px;
+    padding: 150px 20px;
   }
 }
 
@@ -1062,6 +1090,19 @@ p {
 
 .footer-cta-headline.animated .word {
   animation: wordReveal 0.8s ease-out forwards;
+}
+@media (max-width:768px){
+  .footer-cta-headline .word {
+  display: inline-block;
+  opacity: 1;
+  transform: translateY(0px);
+  filter: blur(0px);
+  animation: none;
+}
+
+.footer-cta-headline.animated .word {
+  animation: none;
+}
 }
 
 .footer-cta-subheadline {

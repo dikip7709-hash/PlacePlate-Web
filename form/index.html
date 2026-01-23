@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Get started with Place Plate - Contact us for custom PowerPoint presentations">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+  <title>Contact Form - Place Plate</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+  <!-- Main Container -->
+  <div class="page-container">
+
+    <!-- ========================================
+         NAVIGATION SECTION
+         Fixed header with logo and menu
+         ======================================== -->
+    <header class="header">
+      <nav class="nav-wrapper">
+        <!-- Logo -->
+        <div class="logo">
+          <img class="logo-icon" src="img/artboard-111-2.png" alt="Place Plate Logo" />
+          <p class="logo-text">
+            <span class="logo-primary">Place</span><span class="logo-accent">Plate</span>
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="nav-menu">
+          <li><a href="../index.html#home" class="nav-link">Home</a></li>
+          <li><a href="../index.html#template" class="nav-link">Template</a></li>
+          <li><a href="../service/index.html" class="nav-link">Service</a></li>
+          <li><a href="../index.html#testimonial" class="nav-link">Testimonial</a></li>
+        </ul>
+
+        <!-- CTA Button -->
+        <button class="btn-primary">
+          Book Call
+        </button>
+        <button class="btn-primary-menu">
+          Menu
+        </button>
+      </nav>
+    </header>
+
+    <!-- ========================================
+         HERO SECTION
+         Form introduction with trust badge
+         ======================================== -->
+    <section class="hero-form" id="home">
+      <div class="hero-content">
+
+        <!-- Trust Badge -->
+        <div class="trust-badge">
+          <div class="stars">
+            <img class="star" src="img/star-4-1.svg" alt="Star rating" />
+            <img class="star" src="img/star-4-1.svg" alt="Star rating" />
+            <img class="star" src="img/star-4-1.svg" alt="Star rating" />
+            <img class="star" src="img/star-4-1.svg" alt="Star rating" />
+            <img class="star" src="img/star-5.svg" alt="Half star rating" />
+          </div>
+          <p class="trust-text">Trusted by 100+ client</p>
+        </div>
+
+        <!-- Hero Text Content -->
+        <div class="hero-text-wrapper">
+          <div class="hero-text">
+            <!-- Main Headline -->
+            <h1 class="hero-headline">
+              <span class="text-primary">Let Get </span>
+              <span class="text-accent">Started</span>
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="hero-subheadline">
+              From concept to completion, we've built pricing that supports your entire creative journey — clear,
+              simple, and fair.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="form-container">
+        <form id="contact-form">
+          <div class="form-fields">
+            <!-- Full Name Field -->
+            <div class="form-group form-group-full">
+              <label class="form-label">Full Name</label>
+              <input type="text" name="full_name" class="form-input" placeholder="Enter your full name" required />
+            </div>
+
+            <!-- Email and WhatsApp Row -->
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" name="email" class="form-input" placeholder="your.email@example.com" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">WhatsApp</label>
+                <input type="tel" name="whatsapp" class="form-input" placeholder="+62 812 3456 7890" required />
+              </div>
+            </div>
+
+            <!-- Message Field -->
+            <div class="form-group form-group-full">
+              <label class="form-label">Message</label>
+              <textarea name="message" class="form-textarea" rows="5" placeholder="Tell us about your project..." required></textarea>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn-primary-large">
+            Send Form
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========================================
+         FAQ SECTION
+         Frequently asked questions
+         ======================================== -->
+    <section id="faq" class="section-faq">
+      <div class="container-faq">
+
+        <!-- FAQ Header -->
+        <div class="faq-header">
+          <h2 class="faq-title">
+            <span class="text-primary">Frequently Asked </span>
+            <span class="text-accent">Question</span>
+          </h2>
+          <p class="faq-subtitle">
+            Answers to common questions about templates, downloads, and customization.
+          </p>
+        </div>
+
+        <!-- FAQ List -->
+        <div class="faq-list">
+
+          <!-- FAQ Item 1 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <h3>How do I start a custom presentation project?</h3>
+              <div class="faq-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M10 4V16M4 10H16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Simply click “Start Your Project” and fill out a short order form. Once we review your request, we’ll guide you through the next steps.
+              </p>
+            </div>
+          </details>
+          
+          <!-- FAQ Item 2 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <h3>What does the design process look like?</h3>
+              <div class="faq-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M10 4V16M4 10H16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                We start by understanding your goals, content, and audience. Then we design your slides using structured storytelling, professional visuals, and animations that support your message.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ Item 3 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <h3>What is the payment process?</h3>
+              <div class="faq-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M10 4V16M4 10H16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                To start the project, a 30% deposit is required. The remaining balance is paid after the final presentation is approved.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ Item 4 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <h3>How long does a custom presentation project take?</h3>
+              <div class="faq-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M10 4V16M4 10H16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Most custom presentation projects are completed within 4–5 working days,
+                depending on complexity and number of slides.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ Item 5 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <h3>What will I receive at the end of the project?</h3>
+              <div class="faq-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M10 4V16M4 10H16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                You’ll receive a fully editable PowerPoint file, ready to use for presentations, pitches, or submissions.
+              </p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER CTA SECTION
+         Final call-to-action before footer
+         ======================================== -->
+    <section class="footer-cta">
+      <div class="footer-cta-content">
+
+        <!-- Trust Badge -->
+        <div class="trust-badge trust-badge-white">
+          <div class="stars">
+            <img class="star" src="img/star-4-1.svg" alt="Star rating" />
+            <img class="star" src="img/star-4-1.svg" alt="Star rating" />
+            <img class="star" src="img/star-4-1.svg" alt="Star rating" />
+            <img class="star" src="img/star-4-1.svg" alt="Star rating" />
+            <img class="star" src="img/star-5-1.svg" alt="Half star rating" />
+          </div>
+          <p class="trust-text">Trusted by 1,000+ customers</p>
+        </div>
+
+        <!-- CTA Text -->
+        <div class="footer-cta-text">
+          <h2 class="footer-cta-headline">
+            <span class="text-primary">Ready to </span>
+            <span class="text-accent">Transform</span>
+            <span class="text-primary"> Your Presentation?</span>
+          </h2>
+          <p class="footer-cta-subheadline">
+            Professional PowerPoint templates and custom presentations designed to help you
+            speak clearly, look credible, and leave a lasting impression.
+          </p>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="footer-cta-buttons">
+          <button class="btn-primary-large" onclick="location.href='../service/index.html'">
+            Custom Presentation
+          </button>
+          <button class="btn-secondary-large" onclick="location.href='../template/index.html'">
+            Get Template
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+         Site footer with links and info
+         ======================================== -->
+    <footer class="footer" id="contact">
+      <div class="footer-content">
+
+        <!-- Footer Top: Links -->
+        <div class="footer-top">
+
+          <!-- Brand Column -->
+          <div class="footer-brand">
+            <p class="brand-name">
+              <span class="brand-primary">PLACE</span><span class="brand-accent">PLATE</span>
+            </p>
+            <p class="brand-tagline">Best PowerPoint Morph</p>
+          </div>
+
+          <!-- Footer Navigation -->
+          <nav class="footer-nav">
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+              <h3 class="footer-col-title">Quick Link</h3>
+              <ul class="footer-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#template">Featured Templates</a></li>
+                <li><a href="../index.html#template">Best Seller</a></li>
+                <li><a href="../template/index.html">New Release</a></li>
+              </ul>
+            </div>
+
+            <!-- Service Links -->
+            <div class="footer-col">
+              <h3 class="footer-col-title">Service</h3>
+              <ul class="footer-links">
+                <li><a href="../service/index.html">Custom Presentation</a></li>
+                <li><a href="../service/index.html#before">Before After</a></li>
+                <li><a href="../service/index.html#howitworks">How it Works</a></li>
+                <li><a href="../service/index.html#professional">Professional</a></li>
+              </ul>
+            </div>
+
+            <!-- Support Links -->
+            <div class="footer-col">
+              <h3 class="footer-col-title">Support</h3>
+              <ul class="footer-links">
+                <li>
+                  <a href="https://wa.me/placeplate" target="_blank" rel="noopener noreferrer">
+                    WhatsApp Support
+                  </a>
+                </li>
+                <li><a href="mailto:hello@placeplate.com">Email Support</a></li>
+                <li><a href="#faq">FAQs</a></li>
+              </ul>
+            </div>
+
+            <!-- Social Links -->
+            <div class="footer-col">
+              <h3 class="footer-col-title">Follow Us</h3>
+              <ul class="footer-links">
+                <li>
+                  <a href="https://www.instagram.com/placeplate12345" target="_blank" rel="noopener noreferrer">
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.tiktok.com/@placeplate" target="_blank" rel="noopener noreferrer">
+                    TikTok
+                  </a>
+                </li>
+                <li>
+                  <a href="https://pin.it/5k25Rz30j" target="_blank" rel="noopener noreferrer">
+                    Pinterest
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/place_plate543" target="_blank" rel="noopener noreferrer">
+                    Twitter/X
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/share/1XcLVdv7DA" target="_blank" rel="noopener noreferrer">
+                    Facebook
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </nav>
+
+        </div>
+
+        <!-- Footer Bottom: Copyright & Social -->
+        <div class="footer-bottom">
+
+          <!-- Copyright -->
+          <p class="copyright">© 2025 Place Plate — All Rights Reserved</p>
+
+          <!-- Social Media Icons -->
+          <div class="social-icons">
+            <p>Follow us for presentation tips, updates, and new template releases.</p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- ========================================
+         RESPONSIVE NAVBAR
+         Mobile menu overlay
+         ======================================== -->
+    <section class="navbar-responsive">
+      <ul>
+        <li onclick="location.href='../index.html#home'"><a class="nav-link-responsive">Home</a></li>
+        <li onclick="location.href='../index.html#template'"><a class="nav-link-responsive">Template</a></li>
+        <li onclick="location.href='../service/index.html'"><a class="nav-link-responsive">Service</a></li>
+        <li onclick="location.href='../index.html#testimonial'"><a class="nav-link-responsive">Testimonial</a></li>
+        <button onclick="location.href='../service/index.html'">Book Call</button>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- Success Notification Overlay (Hidden by default) -->
+  <div class="notification-overlay" id="notification-overlay">
+    <div class="notification-container">
+      <div class="notification-card">
+        <!-- Success icon -->
+        <div class="success-icon">
+          <svg viewBox="0 0 52 52">
+            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none" stroke="#00adb5" stroke-width="2"/>
+            <path class="checkmark-check" fill="none" stroke="#00adb5" stroke-width="3" stroke-linecap="round" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+          </svg>
+        </div>
+
+        <!-- Content -->
+        <div class="notification-content">
+          <h1 class="notification-title">Form Successfully Submitted!</h1>
+          <p class="notification-message">
+            Thank you for contacting PlacePlate.
+          </p>
+          <p class="notification-submessage">
+            Our team will review your submission and get back to you within 24 hours.
+          </p>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="notification-actions">
+          <a href="../index.html" class="btn btn-primary">Back to Home</a>
+          <a href="../template/index.html" class="btn btn-secondary">View Templates</a>
+        </div>
+
+        <!-- Response time info -->
+        <div class="time-info">
+          <div class="time-label">Maximum Response Time</div>
+          <div class="time-value">24 Hours</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

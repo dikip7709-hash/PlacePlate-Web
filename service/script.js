@@ -346,6 +346,15 @@ function initComparisonAnimation() {
 
   if (comparisonCards.length === 0) return;
 
+  // Disable animation for devices 768px and below
+  if (window.innerWidth <= 768) {
+    comparisonCards.forEach(card => {
+      card.style.opacity = '1';
+      card.style.transform = 'translateX(0)';
+    });
+    return;
+  }
+
   const observerOptions = {
     threshold: 0.2,
     rootMargin: '0px'

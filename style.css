@@ -1243,7 +1243,7 @@ p {
 .footer-bottom {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   padding-top: 32px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -1498,4 +1498,21 @@ p {
   font-weight: 500;
   color: #003e41;
   transition: color 0.3s ease;
+}
+.policy{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  font-size: 12px;
+}
+.policy li{
+  border-right: 1px solid rgba(255, 255, 255, 0.315);
+  width: auto;
+  padding-right: 20px;
+  list-style-type: none;
+}
+.copyright{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }

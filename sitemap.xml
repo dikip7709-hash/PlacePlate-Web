@@ -90,7 +90,7 @@
     ============================================
   -->
 
-  <!-- BLOG — uncomment saat halaman blog sudah dibuat
+  <!-- BLOG  uncomment saat halaman blog sudah dibuat
   <url>
     <loc>https://placeplate.com/blog/</loc>
     <lastmod>2026-04-27</lastmod>
@@ -99,7 +99,7 @@
   </url>
   -->
 
-  <!-- TEMPLATE PREVIEW — duplikat untuk setiap template
+  <!-- TEMPLATE PREVIEW  duplikat untuk setiap template
   <url>
     <loc>https://placeplate.com/templates/pp-23-dark-gradient-minimalist/</loc>
     <lastmod>2026-04-27</lastmod>
@@ -108,7 +108,7 @@
   </url>
   -->
 
-  <!-- ARTIKEL BLOG — duplikat untuk setiap artikel
+  <!-- ARTIKEL BLOG  duplikat untuk setiap artikel
   <url>
     <loc>https://placeplate.com/blog/morph-transition-guide/</loc>
     <lastmod>2026-04-27</lastmod>

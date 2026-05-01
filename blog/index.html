@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Presentation tips, PowerPoint tutorials, and design insights from the PlacePlate team.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+  <title>Blog — Presentation Tips & Design Insights | PlacePlate</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="../img/Icon-PlacePlate.png">
+  <link rel="stylesheet" href="style.css" />
+  <script src="../components.js"></script>
+</head>
+
+<body>
+  <div class="page-container">
+
+    <!-- ========================================
+         NAVIGATION
+         ======================================== -->
+    <header class="header">
+      <nav class="nav-wrapper">
+        <!-- Logo -->
+        <div class="logo" onclick="location.href='../index.html'">
+          <img class="logo-icon" src="../img/Untitled-1.png" alt="Place Plate Logo" />
+          <p class="logo-text">
+            <span class="logo-primary">Place</span><span class="logo-accent">Plate</span>
+          </p>
+        </div>
+        
+        <!-- Navigation Links -->
+        <ul class="nav-menu">
+          <li><a href="/templates/index.html" class="nav-link">Templates</a></li>
+          <li><a href="/services/index.html" class="nav-link">Services</a></li>
+          <li><a href="/about/index.html" class="nav-link">About</a></li>
+          <li><a href="/blog/index.html" class="nav-link">Blog</a></li>
+          <li><a href="/faq/index.html" class="nav-link">Faq</a></li>
+        </ul>
+        
+        <!-- CTA Button -->
+        <button class="btn-primary" onclick="location.href='/services/index.html'" data-i18n="btn_book_call">
+            Book Call
+          </button>
+          <button class="btn-primary-menu" data-i18n="menu_btn">Menu</button>
+      </nav>
+    </header>
+
+
+    <!-- ========================================
+         PAGE HERO
+         ======================================== -->
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span>Blog</span>
+        </nav>
+        <div class="page-hero-text">
+          <span class="section-eyebrow">Insights & Tutorials</span>
+          <h1 class="page-hero-title">
+            <span class="text-primary">Presentation Tips &</span><br>
+            <span class="text-accent">Design Insights</span>
+          </h1>
+          <p class="page-hero-desc">
+            Practical guides, PowerPoint tutorials, and design strategies to help you
+            create presentations that communicate clearly and leave a lasting impression.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         FEATURED POST
+         ======================================== -->
+    <section class="section-featured">
+      <div class="container">
+        <div class="featured-card">
+          <div class="featured-img-wrap">
+            <img class="featured-img" src="/img/presentation_thumbnail.webp" alt="How to Use PowerPoint Morph Transition:
+Complete Step-by-Step Guide (2026)" />
+            <span class="post-badge post-badge-featured">Featured</span>
+          </div>
+          <div class="featured-content">
+            <div class="post-meta">
+              <span class="post-category cat-powerpoint">PowerPoint</span>
+              <span class="post-date">April 18, 2025</span>
+              <span class="post-readtime">8 min read</span>
+            </div>
+            <h2 class="featured-title">
+              How to Use PowerPoint Morph Transition:
+Complete Step-by-Step Guide (2026)
+            </h2>
+            <p class="featured-excerpt">
+              The Morph transition is one of PowerPoint's most powerful yet underused features. Learn how to create smooth, cinematic animations without any advanced design experience — including the secret !! naming trick that professionals use.
+            </p>
+            <a href="/blog/powerpoint-morph-tutorial/index.html" class="btn-read-more">
+              Read Article
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         BLOG GRID
+         ======================================== -->
+    <section class="section-blog">
+      <div class="container">
+
+        <!-- Filter Bar -->
+        <div class="blog-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Posts</button>
+          <button class="filter-btn" data-filter="tips">Tips & Tricks</button>
+          <button class="filter-btn" data-filter="powerpoint">PowerPoint</button>
+          <button class="filter-btn" data-filter="design">Design</button>
+          <button class="filter-btn" data-filter="inspiration">Inspiration</button>
+        </div>
+
+        <!-- Blog Grid -->
+        <div class="blog-grid" id="blogGrid">
+
+          <!-- Post 1 -->
+          <article class="blog-card" data-category="powerpoint">
+            <a href="powerpoint-morph-tutorial/index.html" class="blog-card-img-link">
+              <img class="blog-img" src="img/post-1.jpg" alt="How to Use PowerPoint Morph for Stunning Slide Transitions" />
+              <span class="post-badge post-badge-new">New</span>
+            </a>
+            <div class="blog-card-body">
+              <div class="post-meta">
+                <span class="post-category cat-powerpoint">PowerPoint</span>
+                <span class="post-date">Apr 22, 2026</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="powerpoint-morph-tutorial/index.html">How to Use PowerPoint Morph for Stunning Slide Transitions</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                The Morph transition is one of PowerPoint's most powerful yet underused features.
+                Learn how to create smooth, cinematic animations without any advanced design experience.
+              </p>
+              <div class="blog-card-footer">
+                <span class="post-readtime">6 min read</span>
+                <a href="powerpoint-morph-tutorial/index.html" class="link-read-more">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="blog-card" data-category="design">
+            <a href="#" class="blog-card-img-link">
+              <img class="blog-img" src="img/post-2.jpg" alt="The Perfect Pitch Deck Structure: 12 Slides Every Investor Wants to See" />
+            </a>
+            <div class="blog-card-body">
+              <div class="post-meta">
+                <span class="post-category cat-design">Design</span>
+                <span class="post-date">Apr 15, 2025</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="#">The Perfect Pitch Deck Structure: 12 Slides Every Investor Wants to See</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                A great pitch deck tells a story. Discover the 12 slides every pitch deck needs,
+                how to sequence them, and the design principles that make investors pay attention.
+              </p>
+              <div class="blog-card-footer">
+                <span class="post-readtime">10 min read</span>
+                <a href="#" class="link-read-more">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 3 -->
+          <article class="blog-card" data-category="design">
+            <a href="#" class="blog-card-img-link">
+              <img class="blog-img" src="img/post-3.jpg" alt="5 Professional Color Palettes for Business Presentations" />
+            </a>
+            <div class="blog-card-body">
+              <div class="post-meta">
+                <span class="post-category cat-design">Design</span>
+                <span class="post-date">Apr 10, 2025</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="#">5 Professional Color Palettes That Work for Any Presentation</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                Color is the first thing your audience notices. We break down five professional
+                palettes, when to use them, and how to apply them consistently across your slides.
+              </p>
+              <div class="blog-card-footer">
+                <span class="post-readtime">5 min read</span>
+                <a href="#" class="link-read-more">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 4 -->
+          <article class="blog-card" data-category="tips">
+            <a href="#" class="blog-card-img-link">
+              <img class="blog-img" src="img/post-4.jpg" alt="How to Structure Your Thesis Defense Presentation Step by Step" />
+            </a>
+            <div class="blog-card-body">
+              <div class="post-meta">
+                <span class="post-category cat-tips">Tips & Tricks</span>
+                <span class="post-date">Apr 5, 2025</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="#">How to Structure Your Thesis Defense Presentation Step by Step</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                A thesis defense is one of the most important presentations of your academic career.
+                Learn the exact structure, slide count, and content strategy to present with confidence.
+              </p>
+              <div class="blog-card-footer">
+                <span class="post-readtime">7 min read</span>
+                <a href="#" class="link-read-more">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 5 -->
+          <article class="blog-card" data-category="powerpoint">
+            <a href="#" class="blog-card-img-link">
+              <img class="blog-img" src="img/post-5.jpg" alt="15 PowerPoint Keyboard Shortcuts to Design Faster" />
+            </a>
+            <div class="blog-card-body">
+              <div class="post-meta">
+                <span class="post-category cat-powerpoint">PowerPoint</span>
+                <span class="post-date">Mar 28, 2025</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="#">15 PowerPoint Keyboard Shortcuts Every Designer Should Know</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                Speed up your workflow dramatically. These 15 keyboard shortcuts will cut your
+                slide production time in half and help you work like a design professional.
+              </p>
+              <div class="blog-card-footer">
+                <span class="post-readtime">4 min read</span>
+                <a href="#" class="link-read-more">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 6 -->
+          <article class="blog-card" data-category="inspiration">
+            <a href="#" class="blog-card-img-link">
+              <img class="blog-img" src="img/post-6.jpg" alt="Minimalist vs. Bold: Which Presentation Style Is Right for You?" />
+            </a>
+            <div class="blog-card-body">
+              <div class="post-meta">
+                <span class="post-category cat-inspiration">Inspiration</span>
+                <span class="post-date">Mar 20, 2025</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="#">Minimalist vs. Bold: Which Presentation Style Is Right for You?</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                Both styles can be powerful — but only when matched to the right context and audience.
+                We compare the two approaches with real examples and help you choose yours.
+              </p>
+              <div class="blog-card-footer">
+                <span class="post-readtime">5 min read</span>
+                <a href="#" class="link-read-more">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 7 -->
+          <article class="blog-card" data-category="tips">
+            <a href="#" class="blog-card-img-link">
+              <img class="blog-img" src="img/post-7.jpg" alt="Why Your Slides Are Losing Your Audience (And How to Fix It)" />
+            </a>
+            <div class="blog-card-body">
+              <div class="post-meta">
+                <span class="post-category cat-tips">Tips & Tricks</span>
+                <span class="post-date">Mar 12, 2025</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="#">Why Your Slides Are Losing Your Audience (And How to Fix It)</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                Too much text, unclear hierarchy, and weak visuals are the three most common
+                reasons presentations fail. Here's how to diagnose and fix each one quickly.
+              </p>
+              <div class="blog-card-footer">
+                <span class="post-readtime">6 min read</span>
+                <a href="#" class="link-read-more">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 8 -->
+          <article class="blog-card" data-category="design">
+            <a href="#" class="blog-card-img-link">
+              <img class="blog-img" src="img/post-8.jpg" alt="Typography Rules for Presentation Slides: A Complete Guide" />
+            </a>
+            <div class="blog-card-body">
+              <div class="post-meta">
+                <span class="post-category cat-design">Design</span>
+                <span class="post-date">Mar 5, 2025</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="#">Typography Rules for Presentation Slides: A Complete Guide</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                Font choice, size hierarchy, and spacing are the invisible forces behind readable,
+                professional slides. Master these rules and your slides will look instantly polished.
+              </p>
+              <div class="blog-card-footer">
+                <span class="post-readtime">8 min read</span>
+                <a href="#" class="link-read-more">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 9 -->
+          <article class="blog-card" data-category="inspiration">
+            <a href="#" class="blog-card-img-link">
+              <img class="blog-img" src="img/post-9.jpg" alt="8 Presentation Design Trends Dominating 2025" />
+            </a>
+            <div class="blog-card-body">
+              <div class="post-meta">
+                <span class="post-category cat-inspiration">Inspiration</span>
+                <span class="post-date">Feb 25, 2025</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="#">8 Presentation Design Trends Dominating 2025</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                From immersive data visualization to motion-first storytelling, these are the
+                design trends shaping how the world's best presenters communicate this year.
+              </p>
+              <div class="blog-card-footer">
+                <span class="post-readtime">5 min read</span>
+                <a href="#" class="link-read-more">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="blog-empty" id="blogEmpty" hidden>
+          <p>No posts found in this category.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================
+         NEWSLETTER / STAY UPDATED
+         ======================================== -->
+    <section class="section-newsletter">
+      <div class="newsletter-inner">
+        <div class="newsletter-text">
+          <span class="section-eyebrow">Stay in the Loop</span>
+          <h2 class="newsletter-title">
+            <span class="text-primary">Get Presentation Tips </span>
+            <span class="text-accent">Delivered to You</span>
+          </h2>
+          <p class="newsletter-desc">
+            New articles, PowerPoint tutorials, and template releases — straight to your inbox.
+            No spam, unsubscribe any time.
+          </p>
+        </div>
+        <form class="newsletter-form" onsubmit="return false;">
+          <div class="newsletter-input-wrap">
+            <input
+              type="email"
+              class="newsletter-input"
+              placeholder="Your email address"
+              autocomplete="email"
+            />
+            <button type="submit" class="btn-newsletter">Subscribe</button>
+          </div>
+          <p class="newsletter-note">Join 1,000+ readers. Free forever.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER CTA
+         ======================================== -->
+    <section class="footer-cta">
+      <div class="footer-cta-content">
+        <div class="trust-badge trust-badge-white">
+          <div class="stars">
+            <img class="star" src="../img/Star 4.svg" alt="Star" />
+            <img class="star" src="../img/Star 4.svg" alt="Star" />
+            <img class="star" src="../img/Star 4.svg" alt="Star" />
+            <img class="star" src="../img/Star 4.svg" alt="Star" />
+            <img class="star" src="../img/Star 5 setengah.svg" alt="Half star" />
+          </div>
+          <p class="trust-text">Trusted by 1,000+ customers</p>
+        </div>
+        <div class="footer-cta-text">
+          <h2 class="footer-cta-headline">
+            <span class="text-primary">Ready to </span>
+            <span class="text-accent">Transform</span>
+            <span class="text-primary"> Your Presentation?</span>
+          </h2>
+          <p class="footer-cta-sub">
+            Professional PowerPoint templates and custom presentations designed to help you
+            speak clearly, look credible, and leave a lasting impression.
+          </p>
+        </div>
+        <div class="footer-cta-buttons">
+          <button class="btn-primary-large" onclick="location.href='../service/index.html'">Custom Presentation</button>
+          <button class="btn-secondary-large" onclick="location.href='../templates/index.html'">Get Template</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+         ======================================== -->
+    <footer class="footer" id="contact">
+      <div class="footer-content">
+        
+        <!-- Footer Top: Links -->
+        <div class="footer-top">
+          
+          <!-- Brand Column -->
+          <div class="footer-brand">
+            <p class="brand-name">
+              <span class="brand-primary">PLACE</span><span class="brand-accent">PLATE</span>
+            </p>
+            <p class="brand-tagline">Best PowerPoint Morph</p>
+          </div>
+          
+          <!-- Footer Navigation -->
+          <nav class="footer-nav">
+            
+            <!-- Quick Links -->
+            <div class="footer-col">
+              <h3 class="footer-col-title" data-i18n="footer_templates">Templates</h3>
+              <ul class="footer-links">
+                <li><a href="/templates/index.html" >All Template</a></li>
+                <li><a href="/templates/index.html" >Best For Academic</a></li>
+                <li><a href="/templates/index.html" >Best For Business</a></li>
+                <li><a href="/templates/index.html" >Package</a></li>
+              </ul>
+            </div>
+            
+            <!-- Service Links -->
+            <div class="footer-col">
+              <h3 class="footer-col-title">Company</h3>
+              <ul class="footer-links">
+                <li><a href="/about/index.html">About Us</a></li>
+                <li><a href="/blog/index.html">Blog</a></li>
+                <li><a href="/services/index.html">Custom Service</a></li>
+              </ul>
+            </div>
+            
+            <!-- Support Links -->
+            <div class="footer-col">
+              <h3 class="footer-col-title">Support</h3>
+              <ul class="footer-links">
+                <li>
+                  <a href="https://wa.me/placeplate" target="_blank" rel="noopener noreferrer">
+                    WhatsApp Support
+                  </a>
+                </li>
+                <li><a href="mailto:hello@placeplate.com">Email Support</a></li>
+                <li><a href="/faq/index.html">FAQs</a></li>
+              </ul>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="footer-col">
+              <h3 class="footer-col-title">Follow Us</h3>
+              <ul class="footer-links">
+                <li>
+                  <a href="https://www.instagram.com/placeplate12345" target="_blank" rel="noopener noreferrer">
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.tiktok.com/@placeplate" target="_blank" rel="noopener noreferrer">
+                    TikTok
+                  </a>
+                </li>
+                <li>
+                  <a href="https://pin.it/5k25Rz30j" target="_blank" rel="noopener noreferrer">
+                    Pinterest
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/place_plate543" target="_blank" rel="noopener noreferrer">
+                    Twitter/X
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/share/1XcLVdv7DA" target="_blank" rel="noopener noreferrer">
+                    Facebook
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+          </nav>
+          
+        </div>
+        
+        <!-- Footer Bottom: Copyright & Social -->
+        <div class="footer-bottom">
+          
+          <!-- Copyright -->
+           <div class="copyright">
+          <p class="copyright">© 2025 Place Plate – All Rights Reserved</p>
+          <ul class="policy">
+            <li><a href="/privacy-policy/index.html">Privacy Policy</a></li>
+            <li><a href="/term-of-services/index.html">Terms of Service</a></li>
+            <li><a href="/refund-policy/index.html">Refund Policy</a></li>
+          </ul>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="social-links">
+            <p>Follow us for presentation tips, updates, and new template releases.</p>
+          </div>
+        </div>
+  </footer>
+  
+    <section class="navbar-responsive">
+      <ul>
+         <li onclick="location.href='/templates/index.html'"><a class="nav-link-responsive">Templates</a></li>
+          <li onclick="location.href='/services/index.html'"><a class="nav-link-responsive">Services</a></li>
+          <li onclick="location.href='/about/index.html'"><a class="nav-link-responsive">About</a></li>
+          <li onclick="location.href='/blog/index.html'"><a class="nav-link-responsive">Blog</a></li>
+          <li onclick="location.href='/faq/index.html'"><a class="nav-link-responsive">Faq</a></li>
+        <button onclick="location.href='/services/index.html'">Book Call</button>
+      </ul>
+    </section>
+
+    <!-- Mobile Nav -->
+
+  </div><!-- /page-container -->
+
+  <script src="script.js"></script>
+</body>
+</html>

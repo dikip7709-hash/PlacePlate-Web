@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Block form submission page from indexing
+Disallow: /form/
+
+Sitemap: https://placeplate.com/sitemap.xml

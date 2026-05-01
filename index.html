@@ -4,16 +4,71 @@
   <!-- Meta Tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Professional PowerPoint templates and custom presentations for every industry">
+  <meta name="description" content="Download professional PowerPoint templates with smooth Morph animations. Perfect for pitch decks, proposals, and thesis presentations." />
+  <meta name="robots" content="index, follow" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
-  <title>PlacePlate — Premium Morph Animated PowerPoint Templates | Instant Download</title>
+  <title>PowerPoint Templates & Morph Slides for Business & Education | PlacePlate</title>
+  <link rel="canonical" href="https://placeplate.com/" />
+  <link rel="preload" as="image" href="img/Screenshot_2025-10-13_144809.webp" fetchpriority="high" />
   <link rel="icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="img/Icon-PlacePlate.png">
-  <link rel="icon" type="images/webp" href="img/Icon-PlacePlate.webp">
-  <meta name="google-site-verification" content="C7Ctu6DiG4nrZWmMY9EoL9km4x7RV10VBuUZxHZc8RY" />
-  <meta name="description" content="Professional morph animated PowerPoint templates for business & education. Fully editable, dark & light versions, instant download. Trusted by 1,000+ customers.">
+  <link rel="icon" type="image/webp" href="img/Icon-PlacePlate.webp">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PlacePlate" />
+  <meta property="og:title" content="PowerPoint Templates & Morph Slides for Business & Education | PlacePlate" />
+  <meta property="og:description" content="Download professional PowerPoint templates with smooth Morph animations. Perfect for pitch decks, proposals, and thesis presentations." />
+  <meta property="og:url" content="https://placeplate.com/" />
+  <meta property="og:image" content="https://placeplate.com/img/Screenshot_2025-10-14_150021.webp" />
+  <meta property="og:image:alt" content="PlacePlate – Professional PowerPoint Templates" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@place_plate543" />
+  <meta name="twitter:title" content="PowerPoint Templates & Morph Slides for Business & Education | PlacePlate" />
+  <meta name="twitter:description" content="Download professional PowerPoint templates with smooth Morph animations. Perfect for pitch decks, proposals, and thesis presentations." />
+  <meta name="twitter:image" content="https://placeplate.com/img/Screenshot_2025-10-14_150021.webp" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://placeplate.com/#organization",
+        "name": "PlacePlate",
+        "url": "https://placeplate.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://placeplate.com/img/Icon-PlacePlate.png"
+        },
+        "description": "Professional PowerPoint templates and custom presentations designed to help you speak clearly, look credible, and leave a lasting impression.",
+        "sameAs": [
+          "https://www.instagram.com/placeplate12345",
+          "https://www.tiktok.com/@placeplate",
+          "https://www.facebook.com/share/1XcLVdv7DA",
+          "https://x.com/place_plate543"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://placeplate.com/#website",
+        "url": "https://placeplate.com",
+        "name": "PlacePlate",
+        "publisher": { "@id": "https://placeplate.com/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://placeplate.com/templates/index.html?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css" />
@@ -21,6 +76,7 @@
 </head>
 
 <body>
+  <a href="#home" class="skip-nav">Skip to main content</a>
   <!-- Main Container -->
   <div class="page-container">
     
@@ -31,28 +87,27 @@
     <header class="header">
       <nav class="nav-wrapper">
         <!-- Logo -->
-        <div class="logo">
-          <img class="logo-icon" src="img/Untitled-1.png" alt="Place Plate Logo" />
-          <p class="logo-text">
+        <a class="logo" href="#home" aria-label="PlacePlate – Home">
+          <img class="logo-icon" src="img/Untitled-1.png" alt="" aria-hidden="true" />
+          <p class="logo-text" aria-hidden="true">
             <span class="logo-primary">Place</span><span class="logo-accent">Plate</span>
           </p>
-        </div>
+        </a>
         
         <!-- Navigation Links -->
         <ul class="nav-menu">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#template" class="nav-link">Template</a></li>
-          <li><a href="service/index.html" class="nav-link">Service</a></li>
-          <li><a href="#testimonial" class="nav-link">Testimonial</a></li>
+          <li><a href="templates/index.html" class="nav-link">Templates</a></li>
+          <li><a href="services/index.html" class="nav-link">Services</a></li>
+          <li><a href="about/index.html" class="nav-link">About</a></li>
+          <li><a href="blog/index.html" class="nav-link">Blog</a></li>
+          <li><a href="faq/index.html" class="nav-link">Faq</a></li>
         </ul>
         
         <!-- CTA Button -->
-        <button class="btn-primary" onclick="location.href='service/index.html'">
-          Book Call
-        </button>
-        <button class="btn-primary-menu" >
-          Menu
-        </button>
+        <button class="btn-primary" onclick="location.href='services/index.html'" data-i18n="btn_book_call">
+            Book Call
+          </button>
+          <button class="btn-primary-menu" aria-label="Open navigation menu" aria-expanded="false" data-i18n="menu_btn">Menu</button>
       </nav>
     </header>
 
@@ -95,10 +150,10 @@
           
           <!-- Hero CTA Buttons -->
           <div class="hero-cta">
-            <button class="btn-primary-large" onclick="location.href='service/index.html'">
+            <button class="btn-primary-large" onclick="location.href='services/index.html'">
               Custom Presentation
             </button>
-            <button class="btn-secondary-large" onclick="location.href='template/index.html'">
+            <button class="btn-secondary-large" onclick="location.href='templates/index.html'">
               Get Template
             </button>
           </div>
@@ -107,77 +162,355 @@
       
       <!-- Hero Image/Preview -->
       <div class="hero-image">
-        <img class="preview-img" src="img/Screenshot 2025-10-13 144809.png" alt="PowerPoint template preview" />
+        <img class="preview-img" src="img/Screenshot_2025-10-13_144809.webp" alt="PP - 20 Cyan Bold Morph PPT Template preview" fetchpriority="high" />
       </div>
     </section>
 
-    <!-- ========================================
+<!-- ========================================
          FEATURED TEMPLATES SECTION
          Showcase of popular templates
          ======================================== -->
     <section class="section-templates" id="template">
       <div class="container">
-        
+
         <!-- Section Header -->
         <header class="section-header">
           <div class="section-title-group">
-            <h2 class="section-title">Featured Template</h2>
-            <p class="section-description">
-              A curated selection of our best-selling and most requested presentation templates, 
-              ready to use and fully editable.
+            <span class="section-label">Featured</span>
+            <h2 class="section-title" data-i18n="featured_title">Featured Templates</h2>
+            <p class="section-description" data-i18n="featured_desc">
+              Our best-selling and most requested presentation templates — ready to use and fully editable.
             </p>
           </div>
-          
-          <!-- View All Button -->
-          <button class="btn-secondary" onclick="location.href='template/index.html'">
-            View All Templates
-          </button>
         </header>
-        
+
         <!-- Template Cards Grid -->
         <div class="template-grid">
-          
+
           <!-- Template Card 1 -->
-          <article class="template-card">
-            <img class="template-img" src="img/Screenshot 2025-10-14 150021.png" alt="PowerPoint template" />
+          <a class="template-card" href="templates/index.html">
+            <img class="template-img" src="img/Screenshot_2025-10-14_150021.webp" alt="PP - 20 Aqua Neumorphic Morph PPT Template" />
             <div class="template-info">
               <div class="template-header">
-                <h3 class="template-title">... PowerPoint 20</h3>
+                <h3 class="template-title">PP - 20 Aqua Neumorphic Morph PowerPoint Template</h3>
                 <span class="badge-popular">Popular</span>
               </div>
-              <p class="template-price">From $3.5</p>
+              <p class="template-price">From <strong>$3.50</strong></p>
             </div>
-          </article>
-          
+          </a>
+
           <!-- Template Card 2 -->
-          <article class="template-card">
-            <img class="template-img" src="img/Screenshot 2025-10-14 150039.png" alt="PowerPoint template" />
+          <a class="template-card" href="templates/index.html">
+            <img class="template-img" src="img/Screenshot_2025-10-14_150039.webp" alt="PP - 23 Teal Orbit Morph PPT Template" />
             <div class="template-info">
               <div class="template-header">
-                <h3 class="template-title">... PowerPoint 23</h3>
+                <h3 class="template-title">PP - 23 Teal Orbit Morph PowerPoint Template</h3>
                 <span class="badge-popular">Popular</span>
               </div>
-              <p class="template-price">From $3.5</p>
+              <p class="template-price">From <strong>$3.50</strong></p>
             </div>
-          </article>
-          
+          </a>
+
           <!-- Template Card 3 -->
-          <article class="template-card">
-            <img class="template-img" src="img/Screenshot 2025-09-28 215049.png" alt="PowerPoint template" />
+          <a class="template-card" href="templates/index.html">
+            <img class="template-img" src="img/Screenshot_2025-09-28_215049.webp" alt="PP - 36 Azure Bloom Morph PPT Template" />
             <div class="template-info">
               <div class="template-header">
-                <h3 class="template-title">... PowerPoint 36</h3>
+                <h3 class="template-title">PP - 36 Azure Bloom Morph PowerPoint Template</h3>
                 <span class="badge-popular">Popular</span>
               </div>
-              <p class="template-price">From $3.5</p>
+              <p class="template-price">From <strong>$3.50</strong></p>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Template Note -->
+        <p class="template-note" data-i18n="template_note">Instant download &bull; Fully editable in PowerPoint &bull; Compatible with PowerPoint 2019+</p>
+
+      </div>
+    </section>
+
+    <!-- ========================================
+         POPULAR BUNDLES SECTION
+         Curated template bundle packages
+         ======================================== -->
+    <section class="section-bundles" id="bundles">
+      <div class="container">
+
+        <!-- Section Header -->
+        <header class="section-header">
+          <div class="section-title-group">
+            <span class="section-label">Bundles</span>
+            <h2 class="section-title">Popular Bundles</h2>
+            <p class="section-description">
+              Get more templates for less. Our bundles combine complementary designs at a significant discount — ideal for teams and frequent presenters.
+            </p>
+          </div>
+        </header>
+
+        <!-- Bundle Grid -->
+        <div class="bundle-grid">
+
+          <!-- Bundle 1: Starter -->
+          <a class="bundle-card" href="templates/index.html">
+            <div class="bundle-visual">
+                <img class="bundle-img bundle-img-3" src="img/Screenshot_2026-03-13_143155.webp" alt="Mini Pack PPT Template" />
+            </div>
+            <div class="bundle-body">
+              <div class="bundle-top">
+                <span class="bundle-save-badge">Save 45%</span>
+                <h3 class="bundle-name">Mini Pack</h3>
+                <p class="bundle-desc">3 clean, professional templates — perfect for getting started</p>
+              </div>
+              <div class="bundle-bottom">
+                <div class="bundle-pricing">
+                  <span class="bundle-price-original">$15.00</span>
+                  <span class="bundle-price">$8.25</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Bundle 2: Professional (featured) -->
+          <a class="bundle-card bundle-card-featured" href="templates/index.html">
+            <div class="bundle-visual">
+                <img class="bundle-img" src="img/Screenshot_2026-02-28_135919.webp" alt="All in One Pack PPT Template" />
+            </div>
+            <div class="bundle-body">
+              <div class="bundle-top">
+                <span class="bundle-save-badge bundle-save-badge-hot">🔥 Most Popular &middot; Save 70%</span>
+                <h3 class="bundle-name">All in One Pack</h3>
+                <p class="bundle-desc">The complete PlacePlate library — every template we offer</p>
+              </div>
+              <div class="bundle-bottom">
+                <div class="bundle-pricing">
+                  <span class="bundle-price-original">$145.00</span>
+                  <span class="bundle-price">$50.75</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Bundle 3: Business Complete -->
+          <a class="bundle-card" href="templates/index.html">
+            <div class="bundle-visual">
+                <img class="bundle-img" src="img/Screenshot_2026-02-28_135931.webp" alt="Best For Business Pack PPT Template" />
+            </div>
+            <div class="bundle-body">
+              <div class="bundle-top">
+                <span class="bundle-save-badge">Save 65%</span>
+                <h3 class="bundle-name">Best For Business Pack</h3>
+                <p class="bundle-desc">Professional PowerPoint Templates for Business & Professional Use</p>
+              </div>
+              <div class="bundle-bottom">
+                <div class="bundle-pricing">
+                  <span class="bundle-price-original">$85.00</span>
+                  <span class="bundle-price">$29.75</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Bundle 4: Ultimate Pack -->
+          <a class="bundle-card" href="templates/index.html">
+            <div class="bundle-visual">
+                <img class="bundle-img" src="img/Screenshot_2026-03-03_205610.webp" alt="Modern Style Pack PPT Template" />
+            </div>
+            <div class="bundle-body">
+              <div class="bundle-top">
+                <span class="bundle-save-badge">Save 65%</span>
+                <h3 class="bundle-name">Modern Style Pack</h3>
+                <p class="bundle-desc">Modern & Minimal PowerPoint Templates Clean design with a strong visual impact</p>
+              </div>
+              <div class="bundle-bottom">
+                <div class="bundle-pricing">
+                  <span class="bundle-price-original">$130.00</span>
+                  <span class="bundle-price">$45.50</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================
+         LATEST TEMPLATES SECTION
+         6 newest template releases
+         ======================================== -->
+    <section class="section-templates section-latest-templates" id="latest-template">
+      <div class="container">
+
+        <!-- Section Header -->
+        <header class="section-header">
+          <div class="section-title-group">
+            <span class="section-label">New Arrivals</span>
+            <h2 class="section-title" data-i18n="latest_title">Latest Templates</h2>
+          </div>
+        </header>
+
+        <!-- Template Cards Grid -->
+        <div class="template-grid">
+
+          <!-- Template Card 1 -->
+          <a class="template-card" href="templates/index.html">
+            <img class="template-img" loading="lazy" src="img/Screenshot_2026-04-26_114107.webp" alt="PP - 1 Pro Pitch Deck Morph PPT Template" />
+            <div class="template-info">
+              <div class="template-header">
+                <h3 class="template-title">PP - 1 Pro Pitch Deck Morph PowerPoint Template</h3>
+                <span class="badge-new">New</span>
+              </div>
+              <p class="template-price">From <strong>$7.00</strong></p>
+            </div>
+          </a>
+
+          <!-- Template Card 2 -->
+          <a class="template-card" href="templates/index.html">
+            <img class="template-img" loading="lazy" src="img/Screenshot_2026-04-26_113314.webp" alt="PP - 46 Steel Blue Morph PPT Template " />
+            <div class="template-info">
+              <div class="template-header">
+                <h3 class="template-title">PP - 46 Steel Blue Morph PowerPoint Template </h3>
+                <span class="badge-new">New</span>
+              </div>
+              <p class="template-price"><strong>Free</strong></p>
+            </div>
+          </a>
+
+          <!-- Template Card 3 -->
+          <a class="template-card" href="templates/index.html">
+            <img class="template-img" loading="lazy" src="img/Screenshot_2026-04-26_113301.webp" alt="PP - 45 Navy Depth Morph PPT Template" />
+            <div class="template-info">
+              <div class="template-header">
+                <h3 class="template-title">PP - 45 Navy Depth Morph PowerPoint Template</h3>
+                <span class="badge-new">New</span>
+              </div>
+              <p class="template-price">From <strong>$3.50</strong></p>
+            </div>
+          </a>
+
+          <!-- Template Card 4 -->
+          <a class="template-card" href="templates/index.html">
+            <img class="template-img" loading="lazy" src="img/Screenshot_2026-04-26_113248.webp" alt="PP - 44 Lilac Soft Morph PPT Template" />
+            <div class="template-info">
+              <div class="template-header">
+                <h3 class="template-title">PP - 44 Lilac Soft Morph PowerPoint Template</h3>
+                <span class="badge-new">New</span>
+              </div>
+              <p class="template-price">From <strong>$3.50</strong></p>
+            </div>
+          </a>
+
+          <!-- Template Card 5 -->
+          <a class="template-card" href="templates/index.html">
+            <img class="template-img" loading="lazy" src="img/Screenshot_2026-04-26_113234.webp" alt="PP - 43 Royal Blue Morph PPT Template" />
+            <div class="template-info">
+              <div class="template-header">
+                <h3 class="template-title">PP - 43 Royal Blue Morph PowerPoint Template</h3>
+                <span class="badge-new">New</span>
+              </div>
+              <p class="template-price">From <strong>$3.50</strong></p>
+            </div>
+          </a>
+
+          <!-- Template Card 6 -->
+          <a class="template-card" href="templates/index.html">
+            <img class="template-img" loading="lazy" src="img/Screenshot_2026-04-26_113216.webp" alt="PP - 42 Slate Clarity Morph PPT Template" />
+            <div class="template-info">
+              <div class="template-header">
+                <h3 class="template-title">PP - 42 Slate Clarity Morph PowerPoint Template</h3>
+                <span class="badge-new">New</span>
+              </div>
+              <p class="template-price">From <strong>$3.50</strong></p>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Browse all link -->
+        <div class="browse-all-wrap">
+          <a class="browse-all-link" href="templates/index.html">
+            Browse all templates
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+     <!-- ========================================
+         WHY CHOOSE US SECTION
+         Key differentiators and features
+         ======================================== -->
+    <section class="section-why-choose">
+      <div class="container">
+
+        <!-- Section Header -->
+        <header class="section-title-group">
+          <span class="section-label">Why Us</span>
+          <h2 class="section-title" data-i18n="why_title">Why Choose Us</h2>
+          <p class="section-description" data-i18n="why_desc">
+            Why professionals choose Place Plate for presentation templates and custom slide design.
+          </p>
+        </header>
+
+        <!-- Features Grid -->
+        <div class="features-grid">
+
+          <!-- Feature 1: Modern Design -->
+          <article class="feature-card">
+            <img class="feature-icon" src="img/curve_2939047 1.svg" alt="Modern design icon" />
+            <div class="feature-content">
+              <h3 class="feature-title" data-i18n="f1_title">Modern Design</h3>
+              <p class="feature-text" data-i18n="f1_text">
+                Clean, modern, and visually structured slides designed to communicate ideas
+                clearly and professionally.
+              </p>
             </div>
           </article>
-          
+
+          <!-- Feature 2: Consistent -->
+          <article class="feature-card">
+            <img class="feature-icon" src="img/pie-chart_387028 1.svg" alt="Consistency icon" />
+            <div class="feature-content">
+              <h3 class="feature-title" data-i18n="f2_title">Consistent</h3>
+              <p class="feature-text" data-i18n="f2_text">
+                A cohesive design system across every slide, ensuring visual harmony and a polished
+                presentation from start to finish.
+              </p>
+            </div>
+          </article>
+
+          <!-- Feature 3: Storytelling (Highlighted) -->
+          <article class="feature-card feature-highlight">
+            <img class="feature-icon" src="img/book_12781307 1.svg" alt="Storytelling icon" />
+            <div class="feature-content">
+              <h3 class="feature-title feature-title-white" data-i18n="f3_title">Storytelling</h3>
+              <p class="feature-text feature-text-white" data-i18n="f3_text">
+                A clear and structured presentation flow that helps your audience understand
+                your message effortlessly, with every slide supporting the main idea.
+              </p>
+            </div>
+          </article>
+
+          <!-- Feature 4: Credibility -->
+          <article class="feature-card">
+            <img class="feature-icon" src="img/reliability_10374452 1.svg" alt="Credibility icon" />
+            <div class="feature-content">
+              <h3 class="feature-title" data-i18n="f4_title">Credibility</h3>
+              <p class="feature-text" data-i18n="f4_text">
+                Professional layouts and visual clarity that help you appear confident, prepared,
+                and trustworthy in front of any audience.
+              </p>
+            </div>
+          </article>
+
         </div>
-        
-        <!-- Template Note -->
-        <p class="template-note">Instant download • Fully editable in PowerPoint</p>
-        
+
       </div>
     </section>
 
@@ -194,76 +527,87 @@
       </div>
     </section>
 
-    <!-- ========================================
+<!-- ========================================
          BENEFITS SECTION
          Key features and benefits
          ======================================== -->
     <section class="section-benefits" id="service">
       <div class="container">
-        
+
         <!-- Benefit Item 1: Image Left -->
         <article class="benefit-item">
-          <video
-  src="img/1017(1).mp4"
-  autoplay
-  muted
-  loop
-  playsinline
-  preload="metadata"
-  class="benefit-img"
-></video>
-          
+          <div class="yt-facade benefit-img" data-id="42W3DwaJyn8" role="button" tabindex="0" aria-label="Play video: Structured Storytelling & Clear Flow">
+            <img
+              src="https://img.youtube.com/vi/42W3DwaJyn8/hqdefault.jpg"
+              alt="Structured Storytelling & Clear Flow – PlacePlate Template Preview"
+              loading="lazy"
+              width="480" height="360"
+            />
+            <button class="yt-play" aria-label="Play video" tabindex="-1">
+              <svg width="68" height="48" viewBox="0 0 68 48" aria-hidden="true">
+                <path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C56 0 34 0 34 0S12 0 7.5 1.7a8.5 8.5 0 0 0-6 6C0 12.1 0 24 0 24s0 11.9 1.5 16.3a8.5 8.5 0 0 0 6 6C12 48 34 48 34 48s22 0 26.5-1.7a8.5 8.5 0 0 0 6-6C68 35.9 68 24 68 24s0-11.9-1.5-16.3z" fill="#ff0000"/>
+                <path d="M45 24 27 14v20z" fill="#fff"/>
+              </svg>
+            </button>
+          </div>
+
           <div class="benefit-content">
-            <h3 class="benefit-title">Structured Storytelling & Clear Flow</h3>
-            <p class="benefit-text">
-              We craft presentations with a clear narrative structure, guiding your audience smoothly 
+            <h3 class="benefit-title" data-i18n="benefit1_title">Structured Storytelling & Clear Flow</h3>
+            <p class="benefit-text" data-i18n="benefit1_text">
+              We craft presentations with a clear narrative structure, guiding your audience smoothly
               from introduction to conclusion—so every message lands with purpose.
             </p>
-            
+
             <!-- Benefit CTA Buttons -->
             <div class="benefit-cta">
-              <button class="btn-primary-large" onclick="location.href='service/index.html'">
+              <button class="btn-primary-large" onclick="location.href='services/index.html'" data-i18n="btn_work_with">
                 Work With Us
               </button>
-              <button class="btn-secondary-large" onclick="location.href='template/index.html'">
+              <button class="btn-secondary-large" onclick="location.href='templates/index.html'" data-i18n="btn_get_template">
                 Get Template
               </button>
             </div>
           </div>
         </article>
-        
+
         <!-- Benefit Item 2: Image Right -->
         <article class="benefit-item benefit-reverse">
           <div class="benefit-content">
-            <h3 class="benefit-title">Clean, Modern, and Consistent Design</h3>
-            <p class="benefit-text">
-              Every slide is designed with visual balance, consistent layout, and modern aesthetics—ensuring 
+            <h3 class="benefit-title" data-i18n="benefit2_title">Clean, Modern, and Consistent Design</h3>
+            <p class="benefit-text" data-i18n="benefit2_text">
+              Every slide is designed with visual balance, consistent layout, and modern aesthetics—ensuring
               your presentation looks professional and credible from start to finish.
             </p>
-            
+
             <!-- Benefit CTA Buttons -->
             <div class="benefit-cta">
-              <button class="btn-primary-large" onclick="location.href='service/index.html'">
+              <button class="btn-primary-large" onclick="location.href='services/index.html'" data-i18n="btn_work_with">
                 Work With Us
               </button>
-              <button class="btn-secondary-large" onclick="location.href='template/index.html'">
+              <button class="btn-secondary-large" onclick="location.href='templates/index.html'" data-i18n="btn_get_template">
                 Get Template
               </button>
             </div>
           </div>
-                    <video
-  src="img/1017(2).mp4"
-  autoplay
-  muted
-  loop
-  playsinline
-  preload="metadata"
-  class="benefit-img"
-></video>
+          <div class="yt-facade benefit-img" data-id="9hwQ8-aKHC8" role="button" tabindex="0" aria-label="Play video: Clean, Modern, and Consistent Design">
+            <img
+              src="https://img.youtube.com/vi/9hwQ8-aKHC8/hqdefault.jpg"
+              alt="Clean, Modern, and Consistent Design – PlacePlate Template Preview"
+              loading="lazy"
+              width="480" height="360"
+            />
+            <button class="yt-play" aria-label="Play video" tabindex="-1">
+              <svg width="68" height="48" viewBox="0 0 68 48" aria-hidden="true">
+                <path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C56 0 34 0 34 0S12 0 7.5 1.7a8.5 8.5 0 0 0-6 6C0 12.1 0 24 0 24s0 11.9 1.5 16.3a8.5 8.5 0 0 0 6 6C12 48 34 48 34 48s22 0 26.5-1.7a8.5 8.5 0 0 0 6-6C68 35.9 68 24 68 24s0-11.9-1.5-16.3z" fill="#ff0000"/>
+                <path d="M45 24 27 14v20z" fill="#fff"/>
+              </svg>
+            </button>
+          </div>
         </article>
-        
+
       </div>
     </section>
+
 
     <!-- ========================================
          RESULTS/STATS SECTION
@@ -276,120 +620,48 @@
           <!-- Results Header -->
           <header class="results-header">
             <div class="results-text">
-              <h2 class="results-title">Client Results</h2>
-              <p class="results-description">
+              <!-- Trust Badge above title -->
+              <div class="trust-badge-white12">
+                <div class="stars">
+                  <img class="star" src="img/Star 4.svg" alt="Star rating" />
+                  <img class="star" src="img/Star 4.svg" alt="Star rating" />
+                  <img class="star" src="img/Star 4.svg" alt="Star rating" />
+                  <img class="star" src="img/Star 4.svg" alt="Star rating" />
+                  <img class="star" src="img/Star 5 setengah.svg" alt="Half star rating" />
+                </div>
+                <p class="trust-text" data-i18n="trust_clients">Trusted by 1,000+ clients & customers</p>
+              </div>
+              <h2 class="results-title" data-i18n="results_title">Client Results</h2>
+              <p class="results-description" data-i18n="results_desc">
                 Real results from presentation projects delivered for students and professionals worldwide.
               </p>
             </div>
-            
-            <!-- Trust Badge (White Version) -->
-            <div class="trust-badge-white12">
-              <div class="stars">
-                <img class="star" src="img/Star 4.svg" alt="Star rating" />
-            <img class="star" src="img/Star 4.svg" alt="Star rating" />
-            <img class="star" src="img/Star 4.svg" alt="Star rating" />
-            <img class="star" src="img/Star 4.svg" alt="Star rating" />
-            <img class="star" src="img/Star 5 setengah.svg" alt="Half star rating" />
-              </div>
-              <p class="trust-text">Trusted by 1,000+ clients & customers</p>
-            </div>
           </header>
-          
+
           <!-- Statistics Grid -->
           <div class="stats-grid">
 
             <!-- Stat 1 -->
             <div class="stat-card">
               <p class="stat-number" data-target="100" data-suffix="+">0</p>
-              <p class="stat-label">Clients Served</p>
+              <p class="stat-label" data-i18n="stat1">Clients Served</p>
             </div>
 
             <!-- Stat 2 (Highlighted) -->
             <div class="stat-card stat-highlight">
               <p class="stat-number" data-target="100" data-suffix="%">0</p>
-              <p class="stat-label">Project Completion</p>
+              <p class="stat-label" data-i18n="stat2">Project Completion</p>
             </div>
 
             <!-- Stat 3 -->
             <div class="stat-card">
-              <p class="stat-number" data-target="1200" data-suffix="+">0</p>
-              <p class="stat-label">Templates Sold</p>
+              <p class="stat-number" data-target="2000" data-suffix="+">0</p>
+              <p class="stat-label" data-i18n="stat3">Templates Sold</p>
             </div>
 
           </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ========================================
-         WHY CHOOSE US SECTION
-         Key differentiators and features
-         ======================================== -->
-    <section class="section-why-choose">
-      <div class="container">
-        
-        <!-- Section Header -->
-        <header class="section-title-group">
-          <h2 class="section-title">Why Choose Us</h2>
-          <p class="section-description">
-            Why professionals choose Place Plate for presentation templates and custom slide design.
-          </p>
-        </header>
-        
-        <!-- Features Grid -->
-        <div class="features-grid">
-          
-          <!-- Feature 1: Modern Design -->
-          <article class="feature-card">
-            <img class="feature-icon" src="img/curve_2939047 1.svg" alt="Modern design icon" />
-            <div class="feature-content">
-              <h3 class="feature-title">Modern Design</h3>
-              <p class="feature-text">
-                Clean, modern, and visually structured slides designed to communicate ideas 
-                clearly and professionally.
-              </p>
-            </div>
-          </article>
-          
-          <!-- Feature 2: Consistent -->
-          <article class="feature-card">
-            <img class="feature-icon" src="img/pie-chart_387028 1.svg" alt="Consistency icon" />
-            <div class="feature-content">
-              <h3 class="feature-title">Consistent</h3>
-              <p class="feature-text">
-                A cohesive design system across every slide, ensuring visual harmony and a polished 
-                presentation from start to finish.
-              </p>
-            </div>
-          </article>
-          
-          <!-- Feature 3: Storytelling (Highlighted) -->
-          <article class="feature-card feature-highlight">
-            <img class="feature-icon" src="img/book_12781307 1.svg" alt="Storytelling icon" />
-            <div class="feature-content">
-              <h3 class="feature-title feature-title-white">Storytelling</h3>
-              <p class="feature-text feature-text-white">
-                A clear and structured presentation flow that helps your audience understand 
-                your message effortlessly, with every slide supporting the main idea.
-              </p>
-            </div>
-          </article>
-          
-          <!-- Feature 4: Credibility -->
-          <article class="feature-card">
-            <img class="feature-icon" src="img/reliability_10374452 1.svg" alt="Credibility icon" />
-            <div class="feature-content">
-              <h3 class="feature-title">Credibility</h3>
-              <p class="feature-text">
-                Professional layouts and visual clarity that help you appear confident, prepared, 
-                and trustworthy in front of any audience.
-              </p>
-            </div>
-          </article>
-          
-        </div>
-        
       </div>
     </section>
 
@@ -544,111 +816,6 @@
     </section>
 
     <!-- ========================================
-         FAQ SECTION
-         Frequently asked questions
-         ======================================== -->
-    <section id="faq" class="section-faq">
-      <div class="container-faq">
-        
-        <!-- FAQ Header -->
-        <div class="faq-header">
-          <h2 class="faq-title">
-            <span class="text-primary">Frequently Asked </span>
-            <span class="text-accent">Question</span>
-          </h2>
-          <p class="faq-subtitle">
-            Answers to common questions about templates, downloads, and customization.
-          </p>
-        </div>
-        
-        <!-- FAQ List -->
-        <div class="faq-list">
-          
-          <!-- FAQ Item 1 -->
-          <details class="faq-item">
-            <summary class="faq-question">
-              <h3>How do I get the template?</h3>
-              <div class="faq-icon">
-                <img src="img/Plus.svg" alt="Toggle" />
-              </div>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                After selecting your country, you'll be redirected to the appropriate store. 
-                Once the purchase is completed, you'll receive instant access to download the PowerPoint template.
-              </p>
-            </div>
-          </details>
-          
-          <!-- FAQ Item 2 -->
-          <details class="faq-item">
-            <summary class="faq-question">
-              <h3>Are the templates fully editable?</h3>
-              <div class="faq-icon">
-                <img src="img/Plus.svg" alt="Toggle" />
-              </div>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                Yes. All templates are 100% editable in Microsoft PowerPoint. You can easily customize 
-                text, colors, images, icons, and layouts to match your needs.
-              </p>
-            </div>
-          </details>
-          
-          <!-- FAQ Item 3 -->
-          <details class="faq-item">
-            <summary class="faq-question">
-              <h3>Do you sell templates and also provide custom design services?</h3>
-              <div class="faq-icon">
-                <img src="img/Plus.svg" alt="Toggle" />
-              </div>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                Yes. We offer ready-to-use PowerPoint templates as well as professional custom 
-                presentation services tailored to your specific requirements.
-              </p>
-            </div>
-          </details>
-          
-          <!-- FAQ Item 4 -->
-          <details class="faq-item">
-            <summary class="faq-question">
-              <h3>How long does a custom presentation project take?</h3>
-              <div class="faq-icon">
-                <img src="img/Plus.svg" alt="Toggle" />
-              </div>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                Most custom presentation projects are completed within 4–5 working days, 
-                depending on complexity and number of slides.
-              </p>
-            </div>
-          </details>
-          
-          <!-- FAQ Item 5 -->
-          <details class="faq-item">
-            <summary class="faq-question">
-              <h3>What software do I need to edit the templates?</h3>
-              <div class="faq-icon">
-                <img src="img/Plus.svg" alt="Toggle" />
-              </div>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                You only need Microsoft PowerPoint. No additional plugins or design software are required.
-              </p>
-            </div>
-          </details>
-          
-        </div>
-        
-      </div>
-    </section>
-
-    <!-- ========================================
          FOOTER CTA SECTION
          Final call-to-action before footer
          ======================================== -->
@@ -682,10 +849,10 @@
         
         <!-- CTA Buttons -->
         <div class="footer-cta-buttons">
-          <button class="btn-primary-large" onclick="location.href='service/index.html'">
+          <button class="btn-primary-large" onclick="location.href='services/index.html'">
             Custom Presentation
           </button>
-          <button class="btn-secondary-large" onclick="location.href='template/index.html'">
+          <button class="btn-secondary-large" onclick="location.href='templates/index.html'">
             Get Template
           </button>
         </div>
@@ -716,22 +883,22 @@
             
             <!-- Quick Links -->
             <div class="footer-col">
-              <h3 class="footer-col-title">Quick Link</h3>
+              <h3 class="footer-col-title" data-i18n="footer_templates">Templates</h3>
               <ul class="footer-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#template">Featured Templates</a></li>
-                <li><a href="#template">Best Seller</a></li>
+                <li><a href="templates/index.html" >All Template</a></li>
+                <li><a href="templates/index.html" >Best For Academic</a></li>
+                <li><a href="templates/index.html" >Best For Business</a></li>
+                <li><a href="templates/index.html" >Package</a></li>
               </ul>
             </div>
             
             <!-- Service Links -->
             <div class="footer-col">
-              <h3 class="footer-col-title">Service</h3>
+              <h3 class="footer-col-title">Company</h3>
               <ul class="footer-links">
-                <li><a href="service/index.html">Custom Presentation</a></li>
-                <li><a href="service/index.html#before">Before After</a></li>
-                <li><a href="service/index.html#howitworks">How it Works</a></li>
-                <li><a href="service/index.html#professional">Professional</a></li>
+                <li><a href="about/index.html">About Us</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="services/index.html">Custom Service</a></li>
               </ul>
             </div>
             
@@ -745,7 +912,7 @@
                   </a>
                 </li>
                 <li><a href="mailto:hello@placeplate.com">Email Support</a></li>
-                <li><a href="#faq">FAQs</a></li>
+                <li><a href="faq/index.html">FAQs</a></li>
               </ul>
             </div>
             
@@ -790,11 +957,11 @@
           
           <!-- Copyright -->
            <div class="copyright">
-          <p class="copyright">© 2025 Place Plate – All Rights Reserved</p>
+          <p class="copyright">© 2026 Place Plate – All Rights Reserved</p>
           <ul class="policy">
-            <li><a href="PRIVACY POLICY/index.html">Privacy Policy</a></li>
-            <li><a href="Term Of Service/index.html">Terms of Service</a></li>
-            <li><a href="Refund Policy/index.html">Refund Policy</a></li>
+            <li><a href="privacy-policy/index.html">Privacy Policy</a></li>
+            <li><a href="term-of-services/index.html">Terms of Service</a></li>
+            <li><a href="refund-policy/index.html">Refund Policy</a></li>
           </ul>
           </div>
 
@@ -804,15 +971,17 @@
           </div>
         </div>
   </footer>
-    <section class="navbar-responsive">
+    <nav class="navbar-responsive" aria-label="Mobile navigation">
       <ul>
-        <li onclick="location.href='#home'"><a class="nav-link-responsive">Home</a></li>
-          <li onclick="location.href='#template'"><a class="nav-link-responsive">Template</a></li>
-          <li onclick="location.href='service/index.html'"><a class="nav-link-responsive">Service</a></li>
-          <li onclick="location.href='#testimonial'"><a class="nav-link-responsive">Testimonial</a></li>
-        <button onclick="location.href='service/index.html'">Book Call</button>
+        <li><a class="nav-link-responsive" href="/templates/index.html">Templates</a></li>
+        <li><a class="nav-link-responsive" href="/services/index.html">Services</a></li>
+        <li><a class="nav-link-responsive" href="/about/index.html">About</a></li>
+        <li><a class="nav-link-responsive" href="/blog/index.html">Blog</a></li>
+        <li><a class="nav-link-responsive" href="/faq/index.html">FAQ</a></li>
+        <button onclick="location.href='/services/index.html'" aria-label="Book a call for custom presentation">Book Call</button>
       </ul>
-    </section>
+    </nav>
+  </div><!-- /.page-container -->
   <!-- JavaScript -->
   <script src="script.js"></script>
 </body>

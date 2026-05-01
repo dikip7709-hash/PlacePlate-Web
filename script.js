@@ -337,7 +337,9 @@ function initMobileMenu() {
 
   // Toggle menu on button click
   menuButton.addEventListener('click', () => {
-    navbarResponsive.classList.toggle('active');
+    const isOpen = navbarResponsive.classList.toggle('active');
+    menuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    menuButton.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
   });
 
   // Close menu when clicking on navigation links
@@ -345,6 +347,8 @@ function initMobileMenu() {
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       navbarResponsive.classList.remove('active');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Open navigation menu');
     });
   });
 
@@ -355,16 +359,257 @@ function initMobileMenu() {
 
     if (!isClickInsideMenu && !isClickOnButton && navbarResponsive.classList.contains('active')) {
       navbarResponsive.classList.remove('active');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Open navigation menu');
     }
+  });
+}
+
+// ========================================
+// NAVBAR SEARCH (inline bar + compact popup)
+// ========================================
+
+function initNavSearch() {
+  const wrap  = document.getElementById('navSearchWrap');
+  const input = document.getElementById('navSearchInline');
+  const popup = document.getElementById('navSearchPopup');
+
+  if (!input) return;
+
+  function navigate(q) {
+    location.href = q
+      ? `templates/index.html?q=${encodeURIComponent(q)}`
+      : 'templates/index.html';
+  }
+
+  function showPopup() {
+    if (popup) popup.hidden = false;
+  }
+
+  function hidePopup() {
+    if (popup) popup.hidden = true;
+  }
+
+  input.addEventListener('focus', showPopup);
+
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { hidePopup(); navigate(input.value.trim()); }
+    if (e.key === 'Escape') { hidePopup(); input.blur(); }
+  });
+
+  // Hint tags — use mousedown so click fires before blur hides popup
+  popup?.querySelectorAll('.popup-hint').forEach(btn => {
+    btn.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      navigate(btn.getAttribute('data-query'));
+    });
+  });
+
+  // Hide popup on outside click
+  document.addEventListener('click', (e) => {
+    if (wrap && !wrap.contains(e.target)) hidePopup();
+  });
+
+  // Mobile search input (navbar-responsive)
+  const mobileInput = document.getElementById('mobileSearchInput');
+  mobileInput?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const q = mobileInput.value.trim();
+      location.href = q
+        ? `templates/index.html?q=${encodeURIComponent(q)}`
+        : 'templates/index.html';
+    }
+  });
+}
+
+// ========================================
+// LANGUAGE SWITCHER
+// Apply saved language on load, switch on click
+// ========================================
+
+function applyLanguage(lang) {
+  if (typeof TRANSLATIONS === 'undefined') return;
+  const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
+
+  // Update text content
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.textContent = t[key];
+  });
+
+  // Update placeholder attributes
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (t[key] !== undefined) el.placeholder = t[key];
+  });
+
+  // RTL for Arabic
+  document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+  document.documentElement.setAttribute('lang', lang);
+}
+
+function initLanguageSwitcher() {
+  const currentLang = localStorage.getItem('pp_lang') || 'en';
+
+  // Mark active button
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === currentLang);
+
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
+      localStorage.setItem('pp_lang', lang);
+      location.reload();
+    });
+  });
+}
+
+// ========================================
+// BUNDLE CARD ENTRANCE ANIMATION
+// Staggered fade-up when cards scroll into view
+// ========================================
+
+function initBundleAnimation() {
+  const cards = document.querySelectorAll('.bundle-card');
+  if (cards.length === 0) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains('visible')) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  cards.forEach((card, i) => {
+    card.style.transitionDelay = `${i * 0.1}s`;
+    observer.observe(card);
+  });
+}
+
+// ========================================
+// PAYMENT MODAL
+// Template purchase popup with USD / IDR tabs
+// ========================================
+
+function initPaymentModal() {
+  const overlay = document.getElementById('paymentOverlay');
+  if (!overlay) return;
+
+  const closeBtn   = document.getElementById('paymentClose');
+  const modalName  = document.getElementById('modalTemplateName');
+  const modalPrice = document.getElementById('modalPrice');
+  const methodsInt = document.getElementById('methodsInt');
+  const methodsId  = document.getElementById('methodsId');
+  const tabs       = overlay.querySelectorAll('.payment-tab');
+
+  let priceInt = '$3.50';
+  let priceId  = 'Rp 55.000';
+
+  function openModal(title, intPrice, idPrice) {
+    priceInt = intPrice;
+    priceId  = idPrice;
+    modalName.textContent  = title;
+    modalPrice.textContent = intPrice;
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.currency === 'int'));
+    methodsInt.classList.remove('hidden');
+    methodsId.classList.add('hidden');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Open modal on any .btn-buy click (event delegation)
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.btn-buy');
+    if (!btn) return;
+    const card  = btn.closest('.template-card');
+    const title = card ? card.querySelector('.template-title').textContent.trim() : 'Template';
+    openModal(title, btn.dataset.int || '$3.50', btn.dataset.id || 'Rp 55.000');
+  });
+
+  // Currency tab switch
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const isId = tab.dataset.currency === 'id';
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      modalPrice.textContent = isId ? priceId : priceInt;
+      methodsInt.classList.toggle('hidden', isId);
+      methodsId.classList.toggle('hidden', !isId);
+    });
+  });
+
+  // Close on button / backdrop / Escape key
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+}
+
+// ========================================
+// YOUTUBE FACADE
+// Defers YouTube iframe load until user clicks — saves ~400 KB on initial load
+// ========================================
+
+function initYoutubeFacade() {
+  document.querySelectorAll('.yt-facade').forEach(facade => {
+    function loadVideo() {
+      const id = facade.dataset.id;
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.title = facade.querySelector('img')?.alt || 'Video preview';
+      facade.innerHTML = '';
+      facade.appendChild(iframe);
+    }
+
+    facade.addEventListener('click', loadVideo);
+    facade.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        loadVideo();
+      }
+    });
+  });
+}
+
+// ========================================
+// STAR RATING ACCESSIBILITY
+// Groups star images under one labelled region so screen readers announce correctly
+// ========================================
+
+function initStarRatingAccessibility() {
+  document.querySelectorAll('.stars').forEach(stars => {
+    stars.setAttribute('role', 'img');
+    stars.setAttribute('aria-label', 'Rating: 4.5 out of 5 stars');
+    stars.querySelectorAll('img').forEach(img => {
+      img.setAttribute('alt', '');
+      img.setAttribute('aria-hidden', 'true');
+    });
   });
 }
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+  // Apply saved language FIRST so animations see translated text
+  const savedLang = localStorage.getItem('pp_lang') || 'en';
+  applyLanguage(savedLang);
+
   initCounterAnimation();
   initBannerWordAnimation();
   initHeroWordAnimation();
   initFooterCtaWordAnimation();
   initTestimonialAnimation();
   initMobileMenu();
+  initNavSearch();
+  initLanguageSwitcher();
+  initBundleAnimation();
+  initPaymentModal();
+  initYoutubeFacade();
+  initStarRatingAccessibility();
 });

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | PlacePlate</title>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="/img/Icon-PlacePlate.png">
+  <link rel="apple-touch-icon" href="/img/Icon-PlacePlate.png">
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+    <div class="page-container">
+      <!-- ========================================
+         NAVIGATION SECTION
+         Fixed header with logo and menu
+         ======================================== -->
+    <header class="header">
+      <nav class="nav-wrapper">
+        <!-- Logo -->
+        <div class="logo" onclick="location.href='/'">
+          <img class="logo-icon" src="/img/Untitled-1.png" alt="" />
+          <p class="logo-text">
+            <span class="logo-primary">Place</span><span class="logo-accent">Plate</span>
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="nav-menu">
+          <li class="nav-item-tpl">
+            <a href="/pages/templates-page.html" class="nav-link nav-link-tpl" data-i18n="nav_template">
+              Templates
+              <img class="tpl-arrow" src="/img/angle-down-solid-full (1).svg" alt="" style="width: 10px;height: 10px;" aria-hidden="true" />
+            </a>
+            <div class="tpl-dropdown" role="menu">
+              <div class="tpl-dropdown-inner">
+                <a href="/pages/templates-page.html" class="tpl-dd-item" role="menuitem">
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="2" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/><rect x="11" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/><rect x="2" y="11" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/><rect x="11" y="11" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/></svg>
+                  All Templates
+                </a>
+                <a href="/pages/templates-page.html?q=academic" class="tpl-dd-item" role="menuitem">
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2L2 7l8 5 8-5-8-5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M2 7v6M18 7v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M6 9.5v4a4 4 0 0 0 8 0v-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Best for Academic
+                </a>
+                <a href="/pages/templates-page.html?q=business" class="tpl-dd-item" role="menuitem">
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="2" y="7" width="16" height="11" rx="1.5" stroke="currentColor" stroke-width="1.7"/><path d="M7 7V5a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                  Best for Business
+                </a>
+                <a href="/pages/templates-page.html?q=package" class="tpl-dd-item" role="menuitem">
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7l7-4 7 4v9l-7 4-7-4V7z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M10 3v13M3 7l7 4 7-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Package
+                </a>
+              </div>
+            </div>
+          </li>
+          <li><a href="/pages/services.html" class="nav-link" data-i18n="nav_service">Services</a></li>
+          <li><a href="/pages/about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+          <li><a href="/pages/blog-page.html" class="nav-link" data-i18n="nav_blog">Blogs</a></li>
+          <li><a href="/pages/faq.html" class="nav-link" data-i18n="nav_faq">FAQs</a></li>
+        </ul>
+
+        <!-- Inline Search + CTA -->
+        <div class="nav-right">
+          <div class="nav-search-wrap" id="navSearchWrap">
+            <svg class="nav-search-icon-inline" width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="8.5" cy="8.5" r="6" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M13 13L18.5 18.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <input
+              type="text"
+              class="nav-search-input-inline"
+              id="navSearchInline"
+              placeholder="Search templates..."
+              autocomplete="off"
+              spellcheck="false"
+              aria-label="Search templates"
+              aria-haspopup="listbox"
+            />
+            <div class="nav-search-popup" id="navSearchPopup" hidden role="listbox" aria-label="Popular searches">
+              <p class="popup-hints-label">Popular searches</p>
+              <div class="popup-hints-list">
+                <button class="popup-hint" data-query="business" role="option">Best For Business</button>
+                <button class="popup-hint" data-query="academic" role="option">Best For Academic</button>
+                <button class="popup-hint" data-query="corporate" role="option">Pro Template</button>
+                <button class="popup-hint" data-query="professional" role="option">Package</button>
+              </div>
+            </div>
+          </div>
+          <button class="btn-primary" onclick="location.href='/pages/services.html'" data-i18n="btn_book_call">
+            Book Call
+          </button>
+          <button class="btn-primary-menu" data-i18n="menu_btn">Menu</button>
+        </div>
+      </nav>
+    </header>
+    <!-- ========================================
+         404 CONTENT SECTION
+         ======================================== -->
+    <section class="section-404">
+      <div class="container-404">
+        <div class="error-number">404</div>
+        <h1 class="error-title">Page Not Found</h1>
+        <p class="error-desc">The page you're looking for doesn't exist or may have been moved. Let's get you back on track.</p>
+        <div class="error-cta">
+          <button class="btn-primary-large" onclick="location.href='/'">Back to Home</button>
+          <button class="btn-secondary-large" onclick="location.href='/pages/templates-page.html'">Browse Templates</button>
+        </div>
+      </div>
+    </section>
+
+     <!-- ========================================
+         FOOTER CTA
+         ======================================== -->
+    <section class="footer-cta">
+      <div class="footer-cta-content">
+        <div class="trust-badge trust-badge-white">
+          <div class="stars">
+            <img class="star" src="/img/Star 4.svg" alt="Star" />
+            <img class="star" src="/img/Star 4.svg" alt="Star" />
+            <img class="star" src="/img/Star 4.svg" alt="Star" />
+            <img class="star" src="/img/Star 4.svg" alt="Star" />
+            <img class="star" src="/img/Star 5 setengah.svg" alt="Half star" />
+          </div>
+          <p class="trust-text">Trusted by 2,000+ clients &amp; customers</p>
+        </div>
+        <div class="footer-cta-text">
+          <h2 class="footer-cta-headline">
+            <span class="text-primary">Ready to </span>
+            <span class="text-accent">Transform</span>
+            <span class="text-primary"> Your Presentation?</span>
+          </h2>
+          <p class="footer-cta-sub">Professional PowerPoint templates and custom presentations designed to help you speak clearly, look credible, and leave a lasting impression.</p>
+        </div>
+        <div class="footer-cta-buttons">
+          <button class="btn-primary-large" onclick="location.href='/pages/services.html'">Custom Presentation</button>
+          <button class="btn-secondary-large" onclick="location.href='/pages/templates-page.html'">Get Template</button>
+        </div>
+      </div>
+    </section>
+
+        <!-- ========================================
+         FOOTER
+         Site footer with links and info
+         ======================================== -->
+    <footer class="footer" id="contact">
+      <div class="footer-content">
+
+        <!-- Footer Top: Links -->
+        <div class="footer-top">
+
+          <!-- Brand Column -->
+          <div class="footer-brand">
+            <p class="brand-name">
+              <span class="brand-primary">PLACE</span><span class="brand-accent">PLATE</span>
+            </p>
+            <p class="brand-tagline" data-i18n="footer_tagline">Best PowerPoint Morph</p>
+          </div>
+
+          <!-- Footer Navigation -->
+          <nav class="footer-nav">
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+              <h3 class="footer-col-title" data-i18n="footer_templates">Templates</h3>
+              <ul class="footer-links">
+                <li><a href="/pages/templates-page.html" >All Template</a></li>
+                <li><a href="/pages/templates-page.html?q=academic" >Best For Academic</a></li>
+                <li><a href="/pages/templates-page.html?q=business" >Best For Business</a></li>
+                <li><a href="/pages/templates-page.html?q=package" >Package</a></li>
+              </ul>
+            </div>
+
+            <!-- Service Links -->
+            <div class="footer-col">
+              <h3 class="footer-col-title">Company</h3>
+              <ul class="footer-links">
+                <li><a href="/pages/about.html">About Us</a></li>
+                <li><a href="/pages/blog-page.html">Blog</a></li>
+                <li><a href="/pages/services.html">Custom Service</a></li>
+              </ul>
+            </div>
+
+            <!-- Support Links -->
+            <div class="footer-col">
+              <h3 class="footer-col-title" data-i18n="footer_col3">Support</h3>
+              <ul class="footer-links">
+                <li>
+                  <a href="https://wa.me/placeplate" target="_blank" rel="noopener noreferrer" data-i18n="fl_whatsapp">
+                    WhatsApp Support
+                  </a>
+                </li>
+                <li><a href="mailto:hello@placeplate.com" data-i18n="fl_email">Email Support</a></li>
+                <li><a href="/pages/faq.html" data-i18n="fl_faqs">FAQs</a></li>
+              </ul>
+            </div>
+
+            <!-- Social Links -->
+            <div class="footer-col">
+              <h3 class="footer-col-title" data-i18n="footer_col4">Follow Us</h3>
+              <ul class="footer-links">
+                <li>
+                  <a href="https://www.instagram.com/placeplate12345" target="_blank" rel="noopener noreferrer">
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.tiktok.com/@placeplate" target="_blank" rel="noopener noreferrer">
+                    TikTok
+                  </a>
+                </li>
+                <li>
+                  <a href="https://pin.it/5k25Rz30j" target="_blank" rel="noopener noreferrer">
+                    Pinterest
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/place_plate543" target="_blank" rel="noopener noreferrer">
+                    Twitter/X
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/share/1XcLVdv7DA" target="_blank" rel="noopener noreferrer">
+                    Facebook
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </nav>
+
+        </div>
+
+        <!-- Footer Bottom: Copyright, Language Switcher & Social -->
+        <div class="footer-bottom">
+
+          <!-- Copyright -->
+          <div class="copyright">
+            <p class="copyright" data-i18n="copyright">© 2025 Place Plate – All Rights Reserved</p>
+            <ul class="policy">
+              <li><a href="/pages/privacy-policy.html" data-i18n="policy_privacy">Privacy Policy</a></li>
+              <li><a href="/pages/term-of-services.html" data-i18n="policy_terms">Terms of Service</a></li>
+              <li><a href="/pages/refund-policy.html" data-i18n="policy_refund">Refund Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div class="social-links">
+            <p data-i18n="follow_text">Follow us for presentation tips, updates, and new template releases.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================
+         MOBILE RESPONSIVE
+         ======================================== -->
+    <section class="navbar-responsive">
+      <ul>
+        <li class="mobile-search-row">
+          <div class="mobile-search-wrap">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+              <circle cx="8.5" cy="8.5" r="6" stroke="#003e41" stroke-width="1.8"/>
+              <path d="M13 13L18.5 18.5" stroke="#003e41" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <input type="text" class="mobile-search-input" id="mobileSearchInput"
+              placeholder="Search templates..."
+              data-i18n-placeholder="mobile_search_placeholder"
+              autocomplete="off" />
+          </div>
+        </li>
+        <li onclick="location.href='/pages/templates-page.html'"><a class="nav-link-responsive " data-i18n="mobile_template">Templates</a></li>
+        <li onclick="location.href='/pages/services.html'"><a class="nav-link-responsive " data-i18n="mobile_service">Services</a></li>
+        <li onclick="location.href='/pages/about.html'"><a class="nav-link-responsive " data-i18n="mobile_testimonial">About</a></li>
+        <li onclick="location.href='/pages/blog-page.html'"><a class="nav-link-responsive " data-i18n="mobile_testimonial">Blogs</a></li>
+        <li onclick="location.href='/pages/faq.html'"><a class="nav-link-responsive " data-i18n="mobile_testimonial">FAQs</a></li>
+        <button onclick="location.href='/pages/services.html'" data-i18n="btn_book_call">Book Call</button>
+      </ul>
+    </section>
+</div>
+
+    <script src="/script.js"></script>
+</body>
+</html>

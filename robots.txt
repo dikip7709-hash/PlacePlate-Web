@@ -1,7 +1,9 @@
 User-agent: *
 Allow: /
 
-# Block form submission page from indexing
+# Exclude pages with no SEO value
+Disallow: /pages/404.html
+Disallow: /pages/form.html
 Disallow: /form/
 
 Sitemap: https://placeplate.com/sitemap.xml

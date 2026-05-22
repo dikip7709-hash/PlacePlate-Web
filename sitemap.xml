@@ -1,82 +1,350 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage -->
+  <!-- ===== Homepage ===== -->
   <url>
     <loc>https://placeplate.com/</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Templates -->
+  <!-- ===== Core Pages ===== -->
   <url>
     <loc>https://placeplate.com/templates/</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Services -->
   <url>
-    <loc>https://placeplate.com/services/</loc>
-    <lastmod>2026-04-29</lastmod>
+    <loc>https://placeplate.com/service/</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
-
-  <!-- About -->
   <url>
     <loc>https://placeplate.com/about/</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Blog -->
   <url>
     <loc>https://placeplate.com/blog/</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Blog: PowerPoint Morph Tutorial -->
-  <url>
-    <loc>https://placeplate.com/blog/powerpoint-morph-tutorial/</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- FAQ -->
   <url>
     <loc>https://placeplate.com/faq/</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- Privacy Policy -->
+  <!-- ===== Blog Posts ===== -->
+  <url>
+    <loc>https://placeplate.com/blog/powerpoint-morph-tutorial/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/blog/how-to-make-pitch-deck-powerpoint/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/blog/best-powerpoint-templates-business-presentations/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ===== Bundle / Pack Templates ===== -->
+  <url>
+    <loc>https://placeplate.com/templates/all-pack-template-powerpoint-morph/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/best-for-business-pack-ppt-template-bundle/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/best-for-academic-pack-ppt-template-bundle/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/modern-style-ppt-template-bundle/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/mandala-style-ppt-template-bundle/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/starter-pack-ppt-template-bundle/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/mini-pack-ppt-template-bundle/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ===== Individual Template Pages ===== -->
+  <url>
+    <loc>https://placeplate.com/templates/pp-46-steel-blue-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-45-navy-depth-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-44-lilac-soft-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-43-royal-blue-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-42-slate-clarity-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-41-gold-coin-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-40-ember-charcoal-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-39-crimson-diamond-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-38-emerald-ring-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-37-sky-edge-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-36-azure-bloom-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-35-onyx-gold-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-34-silver-chrome-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-33-dark-gold-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-32-cobalt-plan-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-31-breeze-compro-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-30-mint-fresh-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-29-violet-prism-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-28-silver-blade-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-27-amber-radial-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-26-obsidian-dark-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-25-oxford-royal-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-24-cambridge-crest-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-23-teal-orbit-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-22-golden-lotus-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-21-gunmetal-focus-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-20-aqua-neumorphic-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-19-tangerine-swirl-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-18-jade-tropic-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-17-sapphire-bloom-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-16-brawijaya-navy-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-15-marigold-deco-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-14-sunflower-bright-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-13-orchid-bloom-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-12-neon-green-morph-powerpoint-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-11-inferno-prism-morph-ppt-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://placeplate.com/templates/pp-1-pro-pitch-deck-morph-ppt-template/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Legal Pages ===== -->
   <url>
     <loc>https://placeplate.com/privacy-policy/</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
-  <!-- Terms of Service -->
   <url>
-    <loc>https://placeplate.com/term-of-services/</loc>
-    <lastmod>2026-04-29</lastmod>
+    <loc>https://placeplate.com/term-of-service/</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
-  <!-- Refund Policy -->
   <url>
     <loc>https://placeplate.com/refund-policy/</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

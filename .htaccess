@@ -1,1 +1,23 @@
+Options -Indexes
+RewriteEngine On
+
+# ===== Core Pages =====
+RewriteRule ^about/?$ /pages/about.html [L]
+RewriteRule ^service/?$ /pages/services.html [L]
+RewriteRule ^faq/?$ /pages/faq.html [L]
+RewriteRule ^templates/?$ /pages/templates-page.html [L]
+
+# ===== Blog Listing & Posts =====
+RewriteRule ^blog/?$ /pages/blog-page.html [L]
+RewriteRule ^blog/([a-z0-9-]+)/?$ /blogs/$1.html [L]
+
+# ===== Individual Template Pages =====
+RewriteRule ^templates/([a-z0-9-]+)/?$ /templates/$1.html [L]
+
+# ===== Legal Pages =====
+RewriteRule ^privacy-policy/?$ /pages/privacy-policy.html [L]
+RewriteRule ^term-of-service/?$ /pages/term-of-services.html [L]
+RewriteRule ^refund-policy/?$ /pages/refund-policy.html [L]
+
+# ===== 404 Error Page =====
 ErrorDocument 404 /pages/404.html

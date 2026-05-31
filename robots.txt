@@ -1,9 +1,8 @@
 User-agent: *
 Allow: /
 
-# Exclude pages with no SEO value
-Disallow: /pages/404.html
-Disallow: /pages/form.html
-Disallow: /form/
+# Block physical file directories (clean URLs are used instead)
+Disallow: /pages/
+Disallow: /blogs/
 
 Sitemap: https://placeplate.com/sitemap.xml

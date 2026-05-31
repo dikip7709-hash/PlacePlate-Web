@@ -1,6 +1,39 @@
 Options -Indexes
 RewriteEngine On
 
+# ===== 301: Redirect path file fisik ke clean URL =====
+RewriteRule ^index\.html$ /? [R=301,L]
+RewriteRule ^pages/about\.html$ /about/? [R=301,L]
+RewriteRule ^pages/blog-page\.html$ /blog/? [R=301,L]
+RewriteRule ^pages/services\.html$ /service/? [R=301,L]
+RewriteRule ^pages/faq\.html$ /faq/? [R=301,L]
+RewriteRule ^pages/templates-page\.html$ /templates/ [R=301,L]
+RewriteRule ^pages/privacy-policy\.html$ /privacy-policy/? [R=301,L]
+RewriteRule ^pages/term-of-services\.html$ /term-of-service/? [R=301,L]
+RewriteRule ^pages/refund-policy\.html$ /refund-policy/? [R=301,L]
+
+# ===== 301: Redirect /*/index.html ke clean URL =====
+RewriteRule ^about/index\.html$ /about/? [R=301,L]
+RewriteRule ^blog/index\.html$ /blog/? [R=301,L]
+RewriteRule ^templates/index\.html$ /templates/? [R=301,L]
+RewriteRule ^faq/index\.html$ /faq/? [R=301,L]
+RewriteRule ^privacy-policy/index\.html$ /privacy-policy/? [R=301,L]
+RewriteRule ^refund-policy/index\.html$ /refund-policy/? [R=301,L]
+RewriteRule ^term-of-service/index\.html$ /term-of-service/? [R=301,L]
+RewriteRule ^term-of-services/index\.html$ /term-of-service/? [R=301,L]
+RewriteRule ^term-of-services/?$ /term-of-service/ [R=301,L]
+RewriteRule ^service/index\.html$ /service/? [R=301,L]
+RewriteRule ^template/index\.html$ /templates/? [R=301,L]
+
+# ===== 301: Form page redirect =====
+RewriteRule ^form/?$ / [R=301,L]
+
+# ===== 301: Legacy broken URLs (spasi, huruf kapital, singular) =====
+RewriteRule "^Refund.+Policy" "/refund-policy/" [R=301,L,NC]
+RewriteRule "^Term.+Of.+Service" "/term-of-service/" [R=301,L,NC]
+RewriteRule "^PRIVACY.+POLICY" "/privacy-policy/" [R=301,L,NC]
+RewriteRule ^template/?$ /templates/ [R=301,L]
+
 # ===== Core Pages =====
 RewriteRule ^about/?$ /pages/about.html [L]
 RewriteRule ^service/?$ /pages/services.html [L]

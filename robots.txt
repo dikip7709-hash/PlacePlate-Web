@@ -4,5 +4,6 @@ Allow: /
 # Block physical file directories (clean URLs are used instead)
 Disallow: /pages/
 Disallow: /blogs/
+Disallow: /templates/*.html
 
 Sitemap: https://placeplate.com/sitemap.xml

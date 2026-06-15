@@ -5154,7 +5154,8 @@ to {
 .product-gallery {
   display:flex;
   flex-direction:column;
-  gap:16px
+  gap:16px;
+  min-width:0
 }
 .gallery-main {
   position:relative;
@@ -5177,18 +5178,36 @@ to {
 }
 .gallery-thumbs {
   display:flex;
-  gap:12px
+  gap:10px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  padding-bottom:6px;
+  scrollbar-width:thin;
+  scrollbar-color:rgba(0,173,181,0.35) transparent
+}
+.gallery-thumbs::-webkit-scrollbar {
+  height:4px
+}
+.gallery-thumbs::-webkit-scrollbar-track {
+  background:transparent
+}
+.gallery-thumbs::-webkit-scrollbar-thumb {
+  background:rgba(0,173,181,0.35);
+  border-radius:4px
 }
 .thumb-item {
-  flex:1;
-  aspect-ratio:16/9;
+  flex:0 0 160px;
+  height:90px;
   border-radius:10px;
   overflow:hidden;
   border:2px solid transparent;
   cursor:pointer;
   padding:0;
   background:#f0f9fa;
-  transition:border-color 0.2s,box-shadow 0.2s
+  transition:border-color 0.2s,box-shadow 0.2s;
+  scroll-snap-align:start;
+  flex-shrink:0
 }
 .thumb-item:hover {
   border-color:rgba(0,173,181,0.4)
@@ -5316,6 +5335,35 @@ to {
 .product-price-note {
   font-size:12px;
   color:rgba(0,62,65,0.4)
+}
+.tpl-price-orig {
+  font-size:0.78rem;
+  color:rgba(0,62,65,0.35);
+  text-decoration:line-through;
+  font-weight:500;
+  margin-right:3px
+}
+.product-price-original {
+  font-size:1rem;
+  font-weight:500;
+  color:rgba(0,62,65,0.35);
+  text-decoration:line-through;
+  line-height:1
+}
+.product-price-row {
+  display:flex;
+  align-items:baseline;
+  gap:0.5rem
+}
+.product-license-note {
+  font-size:11px;
+  font-weight:600;
+  color:rgba(0,62,65,0.5);
+  background:rgba(0,62,65,0.05);
+  border:1px solid rgba(0,62,65,0.1);
+  border-radius:6px;
+  padding:6px 10px;
+  margin:0
 }
 .product-btn-get {
   display:flex;
@@ -5554,6 +5602,10 @@ to {
 }
 .gallery-thumbs {
   gap:8px
+}
+.thumb-item {
+  flex:0 0 130px;
+  height:73px
 }
 
 }
@@ -5872,4 +5924,76 @@ to {
   color:#666;
   text-align:left;
   margin-top:8px
+}}
+
+/* ========================================
+   PAYMENT METHODS BADGE (product pages)
+   ======================================== */
+.payment-methods {
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  padding:12px 14px;
+  background:rgba(0,62,65,0.03);
+  border:1px solid rgba(0,62,65,0.08);
+  border-radius:10px
+}
+.payment-methods-label {
+  display:flex;
+  align-items:center;
+  gap:5px;
+  font-size:11px;
+  font-weight:600;
+  color:rgba(0,62,65,0.5);
+  text-transform:uppercase;
+  letter-spacing:0.04em
+}
+.payment-icons {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap
+}
+.payment-icons i {
+  font-size:1.9rem;
+  color:rgba(0,62,65,0.3);
+  transition:color 0.2s
+}
+.payment-icons i:hover {
+  color:rgba(0,62,65,0.7)
+}
+
+/* ========================================
+   PAYMENT STRIP (catalog page)
+   ======================================== */
+.catalog-payment-strip {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  padding:10px 20px;
+  margin-bottom:24px;
+  background:rgba(0,62,65,0.03);
+  border:1px solid rgba(0,62,65,0.07);
+  border-radius:10px;
+  flex-wrap:wrap
+}
+.catalog-payment-strip-label {
+  font-size:11px;
+  font-weight:600;
+  color:rgba(0,62,65,0.45);
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  white-space:nowrap
+}
+.catalog-payment-strip .payment-icons {
+  gap:12px
+}
+.catalog-payment-strip .payment-icons i {
+  font-size:1.7rem;
+  color:rgba(0,62,65,0.28);
+  transition:color 0.2s
+}
+.catalog-payment-strip .payment-icons i:hover {
+  color:rgba(0,62,65,0.6)
 }

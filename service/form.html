@@ -709,3 +709,192 @@
 
 </body>
 </html>
+
+<!--
+===========================================================================
+  EMAILJS TEMPLATE — PlacePlate Brand Style
+  Salin HTML di bawah ke dashboard.emailjs.com/admin/templates
+
+  SUBJECT:
+  New Order: {{topic}} — {{plan_name}} Plan
+
+  TEMPLATE VARIABLES:
+  {{plan_name}}, {{slide_count}}, {{total_price}}, {{dp_amount}},
+  {{full_name}}, {{email}}, {{whatsapp}},
+  {{topic}}, {{purpose}}, {{audience}}, {{message}}
+
+  CARA:
+  1. Buka https://dashboard.emailjs.com/admin/templates
+  2. Create New Template
+  3. Subject → isi seperti di atas
+  4. Content → pilih HTML, paste semua kode di bawah
+  5. Salin Template ID → ganti 'YOUR_ORDER_TEMPLATE_ID' di script form.html
+===========================================================================
+
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background-color:#f0f4f4;font-family:Arial,Helvetica,sans-serif;">
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f0f4f4;padding:32px 16px;">
+  <tr>
+    <td align="center">
+      <table width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;width:100%;">
+
+        <!-- HEADER -->
+        <tr>
+          <td style="background-color:#003e41;border-radius:16px 16px 0 0;padding:36px 40px;text-align:center;">
+            <p style="margin:0 0 6px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);">PlacePlate Custom Service</p>
+            <h1 style="margin:0 0 8px;font-size:26px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;">
+              PLACE<span style="color:#00adb5;">PLATE</span>
+            </h1>
+            <p style="margin:0;font-size:14px;color:rgba(255,255,255,0.55);">New Project Order Received</p>
+          </td>
+        </tr>
+
+        <!-- PRICING SUMMARY -->
+        <tr>
+          <td style="background-color:#003e41;padding:0 40px 32px;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0"
+              style="background-color:rgba(0,173,181,0.12);border:1px solid rgba(0,173,181,0.3);border-radius:12px;overflow:hidden;">
+              <tr>
+                <td style="padding:20px 24px 14px;">
+                  <p style="margin:0 0 16px;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Pricing Summary</p>
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td style="padding:6px 0;font-size:13px;color:rgba(255,255,255,0.5);width:55%;">Plan</td>
+                      <td style="padding:6px 0;font-size:13px;font-weight:700;color:#ffffff;text-align:right;">{{plan_name}}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:6px 0;font-size:13px;color:rgba(255,255,255,0.5);">Number of Slides</td>
+                      <td style="padding:6px 0;font-size:13px;font-weight:700;color:#ffffff;text-align:right;">{{slide_count}} slides</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" style="padding:8px 0;">
+                        <div style="height:1px;background-color:rgba(255,255,255,0.1);"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding:8px 0;font-size:15px;font-weight:700;color:#ffffff;">Total Estimate</td>
+                      <td style="padding:8px 0;font-size:20px;font-weight:800;color:#ffffff;text-align:right;">${{total_price}}</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- DP Row -->
+              <tr>
+                <td style="background-color:#00adb5;padding:14px 24px;border-radius:0 0 11px 11px;">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td style="font-size:13px;font-weight:700;color:#ffffff;">Down Payment (30%)</td>
+                      <td style="font-size:20px;font-weight:800;color:#ffffff;text-align:right;">${{dp_amount}}</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- BODY -->
+        <tr>
+          <td style="background-color:#ffffff;padding:32px 40px;">
+
+            <!-- Client Info -->
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:28px;">
+              <tr>
+                <td style="padding-bottom:14px;border-bottom:2px solid #003e41;">
+                  <p style="margin:0;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#003e41;">Client Information</p>
+                </td>
+              </tr>
+              <tr><td style="padding:10px 0 0;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td style="padding:7px 0;font-size:13px;color:#888;width:40%;vertical-align:top;">Full Name</td>
+                    <td style="padding:7px 0;font-size:13px;font-weight:600;color:#003e41;">{{full_name}}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:7px 0;font-size:13px;color:#888;vertical-align:top;">Email</td>
+                    <td style="padding:7px 0;font-size:13px;color:#003e41;">{{email}}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:7px 0;font-size:13px;color:#888;vertical-align:top;">WhatsApp</td>
+                    <td style="padding:7px 0;font-size:13px;color:#003e41;">{{whatsapp}}</td>
+                  </tr>
+                </table>
+              </td></tr>
+            </table>
+
+            <!-- Project Details -->
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:28px;">
+              <tr>
+                <td style="padding-bottom:14px;border-bottom:2px solid #003e41;">
+                  <p style="margin:0;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#003e41;">Project Details</p>
+                </td>
+              </tr>
+              <tr><td style="padding:10px 0 0;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td style="padding:7px 0;font-size:13px;color:#888;width:40%;vertical-align:top;">Topic / Title</td>
+                    <td style="padding:7px 0;font-size:13px;font-weight:600;color:#003e41;">{{topic}}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:7px 0;font-size:13px;color:#888;vertical-align:top;">Purpose</td>
+                    <td style="padding:7px 0;font-size:13px;color:#003e41;">{{purpose}}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:7px 0;font-size:13px;color:#888;vertical-align:top;">Target Audience</td>
+                    <td style="padding:7px 0;font-size:13px;color:#003e41;">{{audience}}</td>
+                  </tr>
+                </table>
+              </td></tr>
+            </table>
+
+            <!-- Additional Notes -->
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td style="padding-bottom:14px;border-bottom:2px solid #003e41;">
+                  <p style="margin:0;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#003e41;">Additional Notes</p>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:14px 0 0;font-size:13px;color:#555;line-height:1.7;">{{message}}</td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+
+        <!-- CTA -->
+        <tr>
+          <td style="background-color:#f0f9fa;padding:24px 40px;text-align:center;">
+            <p style="margin:0 0 14px;font-size:14px;color:#003e41;font-weight:600;">Ready to start this project?</p>
+            <a href="mailto:{{email}}"
+              style="display:inline-block;background-color:#003e41;color:#ffffff;font-size:13px;font-weight:700;text-decoration:none;padding:12px 28px;border-radius:8px;letter-spacing:0.03em;">
+              Reply to {{full_name}}
+            </a>
+          </td>
+        </tr>
+
+        <!-- FOOTER -->
+        <tr>
+          <td style="background-color:#222831;border-radius:0 0 16px 16px;padding:24px 40px;text-align:center;">
+            <p style="margin:0 0 4px;font-size:16px;font-weight:800;color:#ffffff;letter-spacing:0.05em;">
+              PLACE<span style="color:#00adb5;">PLATE</span>
+            </p>
+            <p style="margin:0;font-size:11px;color:rgba(255,255,255,0.3);">
+              Order submitted via placeplate.com/service/form &nbsp;·&nbsp; hello@placeplate.com
+            </p>
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+===========================================================================
+-->

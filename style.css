@@ -1570,6 +1570,7 @@ p {
 .hero-subheadline {
   text-align:left
 }
+
 .hero-cta {
   justify-content:flex-start
 }
@@ -3751,12 +3752,12 @@ to {
 
 }
 .notification-card {
-  background:rgba(255,255,255,0.15);
+  background:rgba(30,36,44,0.96);
   backdrop-filter:blur(20px);
   -webkit-backdrop-filter:blur(20px);
   border-radius:24px;
-  border:1px solid rgba(255,255,255,0.2);
-  box-shadow:0 20px 60px rgba(0,0,0,0.1);
+  border:1px solid rgba(255,255,255,0.12);
+  box-shadow:0 20px 60px rgba(0,0,0,0.5);
   padding:50px 40px;
   text-align:center;
   position:relative;
@@ -3925,7 +3926,7 @@ to {
   gap:48px
 }
 .hero-form .hero-content {
-  align-items:flex-start;
+  align-items:left;
   max-width:100%
 }
 .form-container {
@@ -5943,7 +5944,7 @@ to {
   color:#666;
   text-align:left;
   margin-top:8px
-}}
+}
 
 /* ========================================
    PAYMENT METHODS BADGE (product pages)

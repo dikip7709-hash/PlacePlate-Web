@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Start your custom PowerPoint presentation project with PlacePlate. Fill out our order form and we'll get back to you within 24 hours." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+  <title>Start Your Project — Order Form | PlacePlate</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/img/Icon-PlacePlate.png">
+  <link rel="icon" type="image/webp" href="/img/Icon-PlacePlate.webp">
+  <link rel="stylesheet" href="/style.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-89SC30WLB7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-89SC30WLB7');
+  </script>
+
+  <style>
+    .form-hero {
+      padding: 140px 24px 60px;
+      background: linear-gradient(180deg, #001f21 0%, #003e41 100%);
+      text-align: center;
+    }
+    .form-hero-label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(0,173,181,0.9);
+      margin-bottom: 14px;
+    }
+    .form-hero h1 {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 14px;
+      line-height: 1.2;
+    }
+    .form-hero p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.65);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .form-section {
+      padding: 60px 24px 80px;
+      background: #f9f9f9;
+    }
+    .form-wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .form-card {
+      background: #fff;
+      border: 1px solid rgba(0,62,65,0.08);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 24px;
+    }
+    .form-card-title {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(0,62,65,0.45);
+      margin: 0 0 24px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(0,62,65,0.08);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group:last-child { margin-bottom: 0; }
+
+    .form-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #003e41;
+      margin-bottom: 7px;
+    }
+    .form-label span {
+      color: #00adb5;
+      margin-left: 2px;
+    }
+    .form-hint {
+      font-size: 12px;
+      color: rgba(0,62,65,0.45);
+      margin-bottom: 7px;
+      display: block;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 400;
+      color: #003e41;
+      background: #f5fafa;
+      border: 1.5px solid rgba(0,62,65,0.12);
+      border-radius: 10px;
+      padding: 12px 16px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-sizing: border-box;
+    }
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: #00adb5;
+      box-shadow: 0 0 0 3px rgba(0,173,181,0.12);
+      background: #fff;
+    }
+    .form-input::placeholder,
+    .form-textarea::placeholder { color: rgba(0,62,65,0.32); }
+
+    .form-select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 7l5 5 5-5' stroke='%23003e41' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 40px;
+      cursor: pointer;
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .plan-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .plan-option {
+      position: relative;
+    }
+    .plan-option input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      width: 0; height: 0;
+    }
+    .plan-option label {
+      display: block;
+      border: 2px solid rgba(0,62,65,0.12);
+      border-radius: 12px;
+      padding: 16px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      background: #f5fafa;
+    }
+    .plan-option input[type="radio"]:checked + label {
+      border-color: #00adb5;
+      background: rgba(0,173,181,0.06);
+    }
+    .plan-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: #003e41;
+      margin-bottom: 2px;
+    }
+    .plan-price {
+      font-size: 13px;
+      color: #00adb5;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .plan-note {
+      font-size: 11px;
+      color: rgba(0,62,65,0.45);
+      line-height: 1.4;
+    }
+    .plan-recommended {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: #00adb5;
+      color: #fff;
+      border-radius: 4px;
+      padding: 2px 7px;
+      margin-bottom: 6px;
+    }
+
+    .radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .radio-chip {
+      position: relative;
+    }
+    .radio-chip input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      width: 0; height: 0;
+    }
+    .radio-chip label {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(0,62,65,0.7);
+      border: 1.5px solid rgba(0,62,65,0.12);
+      border-radius: 20px;
+      padding: 7px 16px;
+      cursor: pointer;
+      transition: all 0.18s;
+      background: #f5fafa;
+      white-space: nowrap;
+    }
+    .radio-chip input[type="radio"]:checked + label {
+      border-color: #00adb5;
+      background: rgba(0,173,181,0.1);
+      color: #003e41;
+      font-weight: 600;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .submit-area {
+      text-align: center;
+      padding-top: 8px;
+    }
+    .btn-submit-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25d366;
+      color: #fff;
+      border: none;
+      border-radius: 14px;
+      padding: 16px 36px;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+    .btn-submit-wa:hover { background: #1dba58; transform: translateY(-1px); }
+    .btn-submit-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: rgba(0,62,65,0.6);
+      border: 1.5px solid rgba(0,62,65,0.15);
+      border-radius: 14px;
+      padding: 13px 28px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      width: 100%;
+      justify-content: center;
+    }
+    .btn-submit-email:hover {
+      border-color: rgba(0,62,65,0.35);
+      color: #003e41;
+    }
+    .submit-note {
+      font-size: 12px;
+      color: rgba(0,62,65,0.4);
+      margin-top: 14px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(0,173,181,0.85);
+      text-decoration: none;
+      margin-bottom: 28px;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: #00adb5; }
+
+    .success-banner {
+      display: none;
+      background: rgba(37,211,102,0.1);
+      border: 1.5px solid rgba(37,211,102,0.3);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .success-banner.show { display: block; }
+    .success-banner p {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a7a3c;
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .form-card { padding: 24px 18px; }
+      .plan-options { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="dark-body">
+  <div class="page-container">
+
+    <!-- NAVIGATION -->
+    <header class="header dark-header">
+      <nav class="nav-wrapper">
+        <div class="logo" onclick="location.href='/'">
+          <img class="logo-icon" src="/img/Untitled-1.png" alt="" />
+          <p class="logo-text">
+            <span class="logo-primary dark-primary">Place</span><span class="logo-accent">Plate</span>
+          </p>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item-tpl">
+            <a href="/templates/" class="nav-link light nav-link-tpl" data-i18n="nav_template">
+              Templates
+              <img class="tpl-arrow" src="/img/angle-down-solid-full (1).svg" alt="" style="width:10px;height:10px;" aria-hidden="true" />
+            </a>
+            <div class="tpl-dropdown" role="menu">
+              <div class="tpl-dropdown-inner">
+                <a href="/templates/" class="tpl-dd-item" role="menuitem">
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="2" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/><rect x="11" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/><rect x="2" y="11" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/><rect x="11" y="11" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/></svg>
+                  All Templates
+                </a>
+                <a href="/templates/?q=academic" class="tpl-dd-item" role="menuitem">
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2L2 7l8 5 8-5-8-5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M2 7v6M18 7v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M6 9.5v4a4 4 0 0 0 8 0v-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Best for Academic
+                </a>
+                <a href="/templates/?q=business" class="tpl-dd-item" role="menuitem">
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="2" y="7" width="16" height="11" rx="1.5" stroke="currentColor" stroke-width="1.7"/><path d="M7 7V5a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                  Best for Business
+                </a>
+                <a href="/templates/?q=package" class="tpl-dd-item" role="menuitem">
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7l7-4 7 4v9l-7 4-7-4V7z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M10 3v13M3 7l7 4 7-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Package
+                </a>
+              </div>
+            </div>
+          </li>
+          <li><a href="/service/" class="nav-link light">Services</a></li>
+          <li><a href="/about/" class="nav-link light">About</a></li>
+          <li><a href="/blog/" class="nav-link light">Blogs</a></li>
+          <li><a href="/faq/" class="nav-link light">FAQs</a></li>
+        </ul>
+        <div class="nav-right">
+          <div class="nav-search-wrap" id="navSearchWrap">
+            <svg class="nav-search-icon-inline light-svg" width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="8.5" cy="8.5" r="6" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M13 13L18.5 18.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <input type="text" class="nav-search-input-inline light-search" id="navSearchInline"
+              placeholder="Search templates..." autocomplete="off" aria-label="Search templates" />
+            <div class="nav-search-popup" id="navSearchPopup" hidden role="listbox">
+              <p class="popup-hints-label">Popular searches</p>
+              <div class="popup-hints-list">
+                <button class="popup-hint" data-query="business" role="option">Best For Business</button>
+                <button class="popup-hint" data-query="academic" role="option">Best For Academic</button>
+                <button class="popup-hint" data-query="corporate" role="option">Pro Template</button>
+                <button class="popup-hint" data-query="package" role="option">Package</button>
+              </div>
+            </div>
+          </div>
+          <button class="btn-primary" onclick="location.href='/service/'">Book Call</button>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="form-hero">
+      <span class="form-hero-label">Custom Presentation Service</span>
+      <h1>Start Your Project</h1>
+      <p>Fill in the details below and we'll get back to you within 24 hours to confirm your order and next steps.</p>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section class="form-section">
+      <div class="form-wrapper">
+
+        <a href="/service/" class="back-link">
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M13 4L7 10l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Back to Service Page
+        </a>
+
+        <div class="success-banner" id="successBanner">
+          <p>✓ Your request has been sent! We'll reply within 24 hours.</p>
+        </div>
+
+        <form id="orderForm" novalidate>
+
+          <!-- PLAN SELECTION -->
+          <div class="form-card">
+            <p class="form-card-title">1 — Choose Your Plan</p>
+            <div class="plan-options">
+              <div class="plan-option">
+                <input type="radio" name="plan" id="planBasic" value="Basic – $35 / 10 Slides" />
+                <label for="planBasic">
+                  <div class="plan-name">Basic</div>
+                  <div class="plan-price">$35 / 10 Slides</div>
+                  <div class="plan-note">Clean layout, typography &amp; professional visuals. Min. 20 slides.</div>
+                </label>
+              </div>
+              <div class="plan-option">
+                <input type="radio" name="plan" id="planPro" value="Professional – $75 / 10 Slides" checked />
+                <label for="planPro">
+                  <span class="plan-recommended">Most Recommended</span>
+                  <div class="plan-name">Professional</div>
+                  <div class="plan-price">$75 / 10 Slides</div>
+                  <div class="plan-note">Storytelling + Morph animation + custom effects. Min. 10 slides.</div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTACT INFO -->
+          <div class="form-card">
+            <p class="form-card-title">2 — Your Contact Info</p>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="fullName">Full Name <span>*</span></label>
+                <input type="text" id="fullName" class="form-input" placeholder="e.g. John Doe" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address <span>*</span></label>
+                <input type="email" id="email" class="form-input" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="whatsapp">WhatsApp Number</label>
+              <span class="form-hint">Include country code, e.g. +628123456789</span>
+              <input type="tel" id="whatsapp" class="form-input" placeholder="+62 812 3456 7890" />
+            </div>
+          </div>
+
+          <!-- PROJECT DETAILS -->
+          <div class="form-card">
+            <p class="form-card-title">3 — Project Details</p>
+            <div class="form-group">
+              <label class="form-label" for="topic">Presentation Topic / Title <span>*</span></label>
+              <input type="text" id="topic" class="form-input" placeholder="e.g. Q2 Sales Report, Thesis Defense, Startup Pitch" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="purpose">Presentation Purpose <span>*</span></label>
+                <select id="purpose" class="form-select" required>
+                  <option value="" disabled selected>Select purpose</option>
+                  <option>Business Pitch / Investor Deck</option>
+                  <option>Company Profile</option>
+                  <option>Academic Thesis / Research</option>
+                  <option>Event / Conference</option>
+                  <option>Marketing / Product Launch</option>
+                  <option>Training / Workshop</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="slideCount">Number of Slides <span>*</span></label>
+                <input type="number" id="slideCount" class="form-input" placeholder="e.g. 20" min="10" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="audience">Target Audience</label>
+              <input type="text" id="audience" class="form-input" placeholder="e.g. Investors, professors, company board, general public" />
+            </div>
+          </div>
+
+          <!-- CONTENT & STYLE -->
+          <div class="form-card">
+            <p class="form-card-title">4 — Content &amp; Style</p>
+            <div class="form-group">
+              <label class="form-label">Content Readiness</label>
+              <div class="radio-group">
+                <div class="radio-chip">
+                  <input type="radio" name="content" id="contentReady" value="Ready (text and images provided)" />
+                  <label for="contentReady">Ready (text &amp; images)</label>
+                </div>
+                <div class="radio-chip">
+                  <input type="radio" name="content" id="contentPartial" value="Partial (some content ready)" checked />
+                  <label for="contentPartial">Partial</label>
+                </div>
+                <div class="radio-chip">
+                  <input type="radio" name="content" id="contentNone" value="Not yet (I need help with content direction)" />
+                  <label for="contentNone">Not yet</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="styleTheme">Style Theme</label>
+                <select id="styleTheme" class="form-select">
+                  <option value="" disabled selected>Select style</option>
+                  <option>Dark &amp; Bold</option>
+                  <option>Light &amp; Clean</option>
+                  <option>Colorful &amp; Creative</option>
+                  <option>Minimal &amp; Professional</option>
+                  <option>Elegant &amp; Luxury</option>
+                  <option>I'll leave it to you</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="deadline">Deadline <span>*</span></label>
+                <input type="date" id="deadline" class="form-input" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="reference">Reference / Inspiration Links</label>
+              <span class="form-hint">Paste links to designs, websites, or presentations you like</span>
+              <textarea id="reference" class="form-textarea" placeholder="https://..."></textarea>
+            </div>
+          </div>
+
+          <!-- ADDITIONAL NOTES -->
+          <div class="form-card">
+            <p class="form-card-title">5 — Additional Notes</p>
+            <div class="form-group">
+              <label class="form-label" for="notes">Anything else we should know?</label>
+              <textarea id="notes" class="form-textarea" style="min-height:120px"
+                placeholder="Brand colors, specific requests, files to share, budget, etc."></textarea>
+            </div>
+          </div>
+
+          <!-- SUBMIT -->
+          <div class="form-card">
+            <div class="submit-area">
+              <button type="button" class="btn-submit-wa" onclick="submitViaWhatsApp()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Send via WhatsApp
+              </button>
+              <button type="button" class="btn-submit-email" onclick="submitViaEmail()">
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.7"/>
+                  <path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                </svg>
+                Send via Email instead
+              </button>
+              <p class="submit-note">We'll reply within 24 hours · Your info is kept confidential</p>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer light-footer" id="contact">
+      <div class="footer-content">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <p class="brand-name">
+              <span class="brand-primary dark">PLACE</span><span class="brand-accent">PLATE</span>
+            </p>
+            <p class="brand-tagline dark">Best PowerPoint Morph</p>
+          </div>
+          <nav class="footer-nav">
+            <div class="footer-col">
+              <h3 class="footer-col-title dark">Templates</h3>
+              <ul class="footer-links-dark">
+                <li><a href="/templates/">All Template</a></li>
+                <li><a href="/templates/">Best For Academic</a></li>
+                <li><a href="/templates/">Best For Business</a></li>
+                <li><a href="/templates/">Package</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3 class="footer-col-title dark">Company</h3>
+              <ul class="footer-links-dark">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/service/">Custom Service</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3 class="footer-col-title dark">Support</h3>
+              <ul class="footer-links-dark">
+                <li><a href="https://wa.me/placeplate" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
+                <li><a href="mailto:hello@placeplate.com">Email Support</a></li>
+                <li><a href="/faq/">FAQs</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3 class="footer-col-title dark">Follow Us</h3>
+              <ul class="footer-links-dark">
+                <li><a href="https://www.instagram.com/placeplate12345" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@placeplate" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+                <li><a href="https://pin.it/5k25Rz30j" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
+                <li><a href="https://x.com/place_plate543" target="_blank" rel="noopener noreferrer">Twitter/X</a></li>
+                <li><a href="https://www.facebook.com/share/1XcLVdv7DA" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="footer-bottom dark-border-top">
+          <div class="copyright dark">
+            <p class="copyright">© 2025 Place Plate – All Rights Reserved</p>
+            <ul class="policy dark-border-right">
+              <li><a href="/privacy-policy/">Privacy Policy</a></li>
+              <li><a href="/term-of-service/">Terms of Service</a></li>
+              <li><a href="/refund-policy/">Refund Policy</a></li>
+            </ul>
+          </div>
+          <div class="social-links dark">
+            <p>Follow us for presentation tips, updates, and new template releases.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MOBILE NAV -->
+    <section class="navbar-responsive dark-responsive">
+      <ul>
+        <li class="mobile-search-row">
+          <div class="mobile-search-wrap">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+              <circle cx="8.5" cy="8.5" r="6" stroke="#003e41" stroke-width="1.8"/>
+              <path d="M13 13L18.5 18.5" stroke="#003e41" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <input type="text" class="mobile-search-input" id="mobileSearchInput"
+              placeholder="Search templates..." autocomplete="off" />
+          </div>
+        </li>
+        <li onclick="location.href='/templates/'"><a class="nav-link-responsive dark-link-responsive">Templates</a></li>
+        <li onclick="location.href='/service/'"><a class="nav-link-responsive dark-link-responsive">Services</a></li>
+        <li onclick="location.href='/about/'"><a class="nav-link-responsive dark-link-responsive">About</a></li>
+        <li onclick="location.href='/blog/'"><a class="nav-link-responsive dark-link-responsive">Blogs</a></li>
+        <li onclick="location.href='/faq/'"><a class="nav-link-responsive dark-link-responsive">FAQs</a></li>
+        <button onclick="location.href='/service/'">Book Call</button>
+      </ul>
+    </section>
+
+  </div>
+
+  <script src="/script.js"></script>
+  <script>
+    function getFormData() {
+      var plan       = document.querySelector('input[name="plan"]:checked');
+      var content    = document.querySelector('input[name="content"]:checked');
+      return {
+        plan:       plan      ? plan.value      : 'Not selected',
+        name:       document.getElementById('fullName').value.trim(),
+        email:      document.getElementById('email').value.trim(),
+        whatsapp:   document.getElementById('whatsapp').value.trim(),
+        topic:      document.getElementById('topic').value.trim(),
+        purpose:    document.getElementById('purpose').value,
+        slides:     document.getElementById('slideCount').value.trim(),
+        audience:   document.getElementById('audience').value.trim(),
+        content:    content   ? content.value   : 'Not selected',
+        style:      document.getElementById('styleTheme').value,
+        deadline:   document.getElementById('deadline').value,
+        reference:  document.getElementById('reference').value.trim(),
+        notes:      document.getElementById('notes').value.trim()
+      };
+    }
+
+    function validateForm() {
+      var d = getFormData();
+      if (!d.name)    { alert('Please enter your full name.');            document.getElementById('fullName').focus();   return false; }
+      if (!d.email)   { alert('Please enter your email address.');        document.getElementById('email').focus();      return false; }
+      if (!d.topic)   { alert('Please enter your presentation topic.');   document.getElementById('topic').focus();      return false; }
+      if (!d.purpose || d.purpose === '') { alert('Please select a presentation purpose.'); document.getElementById('purpose').focus(); return false; }
+      if (!d.slides)  { alert('Please enter the number of slides.');      document.getElementById('slideCount').focus(); return false; }
+      if (!d.deadline){ alert('Please select your deadline.');            document.getElementById('deadline').focus();  return false; }
+      return d;
+    }
+
+    function submitViaWhatsApp() {
+      var d = validateForm();
+      if (!d) return;
+
+      var msg = [
+        '🎨 *New Project Request — PlacePlate Custom Service*',
+        '',
+        '📋 *Plan:* ' + d.plan,
+        '',
+        '👤 *Contact Info*',
+        'Name: ' + d.name,
+        'Email: ' + d.email,
+        d.whatsapp ? 'WhatsApp: ' + d.whatsapp : '',
+        '',
+        '📊 *Project Details*',
+        'Topic: ' + d.topic,
+        'Purpose: ' + d.purpose,
+        'Slides: ' + d.slides,
+        d.audience ? 'Audience: ' + d.audience : '',
+        '',
+        '🎨 *Content & Style*',
+        'Content: ' + d.content,
+        d.style ? 'Style: ' + d.style : '',
+        'Deadline: ' + d.deadline,
+        d.reference ? 'Reference: ' + d.reference : '',
+        '',
+        d.notes ? '📝 *Notes:* ' + d.notes : ''
+      ].filter(Boolean).join('\n');
+
+      var waUrl = 'https://wa.me/placeplate?text=' + encodeURIComponent(msg);
+      window.open(waUrl, '_blank');
+      document.getElementById('successBanner').classList.add('show');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function submitViaEmail() {
+      var d = validateForm();
+      if (!d) return;
+
+      var body = [
+        'Plan: ' + d.plan,
+        'Name: ' + d.name,
+        'Email: ' + d.email,
+        d.whatsapp ? 'WhatsApp: ' + d.whatsapp : '',
+        '',
+        'Topic: ' + d.topic,
+        'Purpose: ' + d.purpose,
+        'Slides: ' + d.slides,
+        d.audience ? 'Audience: ' + d.audience : '',
+        '',
+        'Content: ' + d.content,
+        d.style ? 'Style: ' + d.style : '',
+        'Deadline: ' + d.deadline,
+        d.reference ? 'Reference: ' + d.reference : '',
+        '',
+        d.notes ? 'Notes: ' + d.notes : ''
+      ].filter(Boolean).join('\n');
+
+      var subject = 'Project Request: ' + d.topic + ' [' + d.plan.split(' ')[0] + ']';
+      window.location.href = 'mailto:hello@placeplate.com'
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body='    + encodeURIComponent(body);
+
+      document.getElementById('successBanner').classList.add('show');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('plan') === 'basic') {
+      document.getElementById('planBasic').checked = true;
+    }
+  </script>
+</body>
+</html>

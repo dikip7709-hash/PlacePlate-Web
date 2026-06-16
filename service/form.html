@@ -300,38 +300,6 @@
           </div>
         </div>
 
-        <!-- Plan Info Cards -->
-        <div class="hero-plan-grid">
-          <div class="hero-plan-card">
-            <p class="hero-plan-name">Basic</p>
-            <p class="hero-plan-price">$35<span style="font-size:14px;font-weight:500;color:rgba(255,255,255,0.5)"> / 10 slides</span></p>
-            <p class="hero-plan-rate">$3.50 per slide · Min. 20 slides</p>
-            <ul class="hero-plan-features">
-              <li>Custom Layout Design</li>
-              <li>Professional Typography</li>
-              <li>Up to 3 revisions</li>
-              <li>Fast Delivery</li>
-            </ul>
-          </div>
-          <div class="hero-plan-card highlighted">
-            <span class="hero-plan-badge">Most Recommended</span>
-            <p class="hero-plan-name">Professional</p>
-            <p class="hero-plan-price">$75<span style="font-size:14px;font-weight:500;color:rgba(255,255,255,0.5)"> / 10 slides</span></p>
-            <p class="hero-plan-rate">$7.50 per slide · Min. 10 slides</p>
-            <ul class="hero-plan-features">
-              <li>Structured Storytelling</li>
-              <li>Morph &amp; Smart Animation</li>
-              <li>Custom Animation Effects</li>
-              <li>Intro Logo Animation</li>
-              <li>Up to 3 revisions</li>
-              <li>Fast Delivery</li>
-            </ul>
-          </div>
-        </div>
-
-        <p style="font-size:12px;color:rgba(255,255,255,0.3);margin-top:4px;">
-          * Estimate shown in form updates live as you select plan and slide count.
-        </p>
       </div>
 
       <!-- RIGHT: Order Form -->
@@ -458,56 +426,6 @@
               </div>
             </div>
 
-            <!-- CONTENT & STYLE -->
-            <div style="margin-top:8px;">
-              <p class="form-section-label">Content &amp; Style</p>
-            </div>
-
-            <div class="form-group form-group-full">
-              <label class="form-label">Content Readiness</label>
-              <div class="chip-group">
-                <div class="chip-option">
-                  <input type="radio" name="content_status" id="cReady"
-                    value="Ready — text and images provided" />
-                  <label class="chip-label" for="cReady">Ready (text &amp; images)</label>
-                </div>
-                <div class="chip-option">
-                  <input type="radio" name="content_status" id="cPartial"
-                    value="Partial — some content ready" checked />
-                  <label class="chip-label" for="cPartial">Partial</label>
-                </div>
-                <div class="chip-option">
-                  <input type="radio" name="content_status" id="cNone"
-                    value="Not yet — need help with content direction" />
-                  <label class="chip-label" for="cNone">Not yet</label>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="styleTheme">Style Theme</label>
-                <select id="styleTheme" name="style_theme" class="form-select-dark">
-                  <option value="" disabled selected>Select style</option>
-                  <option>Dark &amp; Bold</option>
-                  <option>Light &amp; Clean</option>
-                  <option>Colorful &amp; Creative</option>
-                  <option>Minimal &amp; Professional</option>
-                  <option>Elegant &amp; Luxury</option>
-                  <option>Leave it to PlacePlate</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="deadline">Deadline <span style="color:#00adb5">*</span></label>
-                <input type="date" id="deadline" name="deadline" class="form-input" required />
-              </div>
-            </div>
-
-            <div class="form-group form-group-full">
-              <label class="form-label" for="reference">Reference / Inspiration Links</label>
-              <input type="text" id="reference" name="reference"
-                class="form-input" placeholder="https://... or describe your style" />
-            </div>
 
             <!-- NOTES -->
             <div style="margin-top:8px;">
@@ -736,24 +654,18 @@
       btn.disabled    = true;
       btn.textContent = 'Sending…';
 
-      var contentRadio = document.querySelector('input[name="content_status"]:checked');
-
       var params = {
-        plan_name:      document.getElementById('hiddenPlanName').value,
-        slide_count:    document.getElementById('hiddenSlideCount').value,
-        total_price:    document.getElementById('hiddenTotalPrice').value,
-        dp_amount:      document.getElementById('hiddenDPAmount').value,
-        full_name:      document.getElementById('fullName').value.trim(),
-        email:          document.getElementById('email').value.trim(),
-        whatsapp:       document.getElementById('whatsapp').value.trim() || '-',
-        topic:          document.getElementById('topic').value.trim(),
-        purpose:        document.getElementById('purpose').value,
-        audience:       document.getElementById('audience').value.trim() || '-',
-        content_status: contentRadio ? contentRadio.value : '-',
-        style_theme:    document.getElementById('styleTheme').value || '-',
-        deadline:       document.getElementById('deadline').value,
-        reference:      document.getElementById('reference').value.trim() || '-',
-        message:        document.getElementById('message').value.trim() || '-'
+        plan_name:   document.getElementById('hiddenPlanName').value,
+        slide_count: document.getElementById('hiddenSlideCount').value,
+        total_price: document.getElementById('hiddenTotalPrice').value,
+        dp_amount:   document.getElementById('hiddenDPAmount').value,
+        full_name:   document.getElementById('fullName').value.trim(),
+        email:       document.getElementById('email').value.trim(),
+        whatsapp:    document.getElementById('whatsapp').value.trim() || '-',
+        topic:       document.getElementById('topic').value.trim(),
+        purpose:     document.getElementById('purpose').value,
+        audience:    document.getElementById('audience').value.trim() || '-',
+        message:     document.getElementById('message').value.trim() || '-'
       };
 
       emailjs.send(EMAILJS_ORDER_CONFIG.serviceID, EMAILJS_ORDER_CONFIG.templateID, params)
@@ -773,108 +685,3 @@
 
 </body>
 </html>
-
-
-<!--
-===========================================================================
-  EMAILJS TEMPLATE CODE — Salin HTML ini ke EmailJS dashboard
-  URL: https://dashboard.emailjs.com/admin/templates
-  Klik "Create New Template", lalu paste di kolom "Content (HTML)"
-
-  SUBJECT (isi di field Subject template):
-  New Order: {{topic}} — {{plan_name}} Plan
-
-  TEMPLATE VARIABLES yang digunakan:
-  {{plan_name}}, {{slide_count}}, {{total_price}}, {{dp_amount}},
-  {{full_name}}, {{email}}, {{whatsapp}},
-  {{topic}}, {{purpose}}, {{audience}},
-  {{content_status}}, {{style_theme}}, {{deadline}}, {{reference}},
-  {{message}}
-
-  Setelah buat template, salin Template ID-nya dan ganti
-  'YOUR_ORDER_TEMPLATE_ID' di script di atas.
-===========================================================================
-
-<div style="font-family:'Helvetica Neue',Arial,sans-serif;max-width:620px;margin:0 auto;background:#f9f9f9;border-radius:16px;overflow:hidden;">
-
-  <!-- Header -->
-  <div style="background:#003e41;padding:32px 36px;text-align:center;">
-    <h1 style="margin:0;color:#ffffff;font-size:22px;font-weight:700;letter-spacing:-0.3px;">
-      New Project Order
-    </h1>
-    <p style="margin:6px 0 0;color:rgba(255,255,255,0.6);font-size:14px;">PlacePlate Custom Presentation Service</p>
-  </div>
-
-  <!-- Pricing Summary -->
-  <div style="background:#ffffff;margin:20px;border-radius:12px;padding:24px;border:1px solid #e8f4f5;">
-    <h2 style="margin:0 0 16px;color:#003e41;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;">Pricing Summary</h2>
-    <table style="width:100%;border-collapse:collapse;">
-      <tr>
-        <td style="padding:8px 0;color:#666;font-size:14px;width:50%">Plan</td>
-        <td style="padding:8px 0;font-weight:700;color:#003e41;font-size:14px;text-align:right">{{plan_name}}</td>
-      </tr>
-      <tr>
-        <td style="padding:8px 0;color:#666;font-size:14px;">Number of Slides</td>
-        <td style="padding:8px 0;font-weight:700;color:#003e41;font-size:14px;text-align:right">{{slide_count}} slides</td>
-      </tr>
-      <tr>
-        <td colspan="2" style="padding:4px 0;border-top:1px solid #e8f4f5;"></td>
-      </tr>
-      <tr>
-        <td style="padding:10px 0;color:#003e41;font-size:15px;font-weight:700;">Total Estimate</td>
-        <td style="padding:10px 0;font-weight:800;color:#003e41;font-size:18px;text-align:right">${{total_price}}</td>
-      </tr>
-      <tr style="background:#f0fafa;border-radius:8px;">
-        <td style="padding:10px 12px;color:#007c80;font-size:14px;font-weight:700;border-radius:8px 0 0 8px;">Down Payment (30%)</td>
-        <td style="padding:10px 12px;font-weight:800;color:#007c80;font-size:18px;text-align:right;border-radius:0 8px 8px 0;">${{dp_amount}}</td>
-      </tr>
-    </table>
-  </div>
-
-  <!-- Client Info -->
-  <div style="margin:0 20px 20px;background:#ffffff;border-radius:12px;padding:24px;border:1px solid #e8f4f5;">
-    <h2 style="margin:0 0 16px;color:#003e41;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;">Client Information</h2>
-    <table style="width:100%;border-collapse:collapse;">
-      <tr><td style="padding:6px 0;color:#666;font-size:13px;width:40%">Name</td><td style="padding:6px 0;color:#003e41;font-size:13px;font-weight:600;">{{full_name}}</td></tr>
-      <tr><td style="padding:6px 0;color:#666;font-size:13px;">Email</td><td style="padding:6px 0;color:#003e41;font-size:13px;">{{email}}</td></tr>
-      <tr><td style="padding:6px 0;color:#666;font-size:13px;">WhatsApp</td><td style="padding:6px 0;color:#003e41;font-size:13px;">{{whatsapp}}</td></tr>
-    </table>
-  </div>
-
-  <!-- Project Details -->
-  <div style="margin:0 20px 20px;background:#ffffff;border-radius:12px;padding:24px;border:1px solid #e8f4f5;">
-    <h2 style="margin:0 0 16px;color:#003e41;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;">Project Details</h2>
-    <table style="width:100%;border-collapse:collapse;">
-      <tr><td style="padding:6px 0;color:#666;font-size:13px;width:40%">Topic</td><td style="padding:6px 0;color:#003e41;font-size:13px;font-weight:600;">{{topic}}</td></tr>
-      <tr><td style="padding:6px 0;color:#666;font-size:13px;">Purpose</td><td style="padding:6px 0;color:#003e41;font-size:13px;">{{purpose}}</td></tr>
-      <tr><td style="padding:6px 0;color:#666;font-size:13px;">Audience</td><td style="padding:6px 0;color:#003e41;font-size:13px;">{{audience}}</td></tr>
-      <tr><td style="padding:6px 0;color:#666;font-size:13px;">Content Status</td><td style="padding:6px 0;color:#003e41;font-size:13px;">{{content_status}}</td></tr>
-      <tr><td style="padding:6px 0;color:#666;font-size:13px;">Style Theme</td><td style="padding:6px 0;color:#003e41;font-size:13px;">{{style_theme}}</td></tr>
-      <tr><td style="padding:6px 0;color:#666;font-size:13px;">Deadline</td><td style="padding:6px 0;color:#003e41;font-size:13px;font-weight:600;">{{deadline}}</td></tr>
-      <tr><td style="padding:6px 0;color:#666;font-size:13px;">Reference</td><td style="padding:6px 0;color:#003e41;font-size:13px;">{{reference}}</td></tr>
-    </table>
-  </div>
-
-  <!-- Notes -->
-  <div style="margin:0 20px 20px;background:#ffffff;border-radius:12px;padding:24px;border:1px solid #e8f4f5;">
-    <h2 style="margin:0 0 12px;color:#003e41;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;">Additional Notes</h2>
-    <p style="margin:0;color:#444;font-size:13px;line-height:1.6;">{{message}}</p>
-  </div>
-
-  <!-- Footer -->
-  <div style="background:#003e41;padding:20px 36px;text-align:center;">
-    <p style="margin:0;color:rgba(255,255,255,0.5);font-size:12px;">This order was submitted via placeplate.com/service/form</p>
-  </div>
-
-</div>
-
-===========================================================================
-  CARA PAKAI:
-  1. Buka https://dashboard.emailjs.com/admin/templates
-  2. Klik "Create New Template"
-  3. Subject: New Order: {{topic}} — {{plan_name}} Plan
-  4. Content (HTML): paste HTML di atas (dari <div style="font-family..."> sampai </div> terakhir)
-  5. Salin Template ID yang muncul
-  6. Ganti 'YOUR_ORDER_TEMPLATE_ID' di script form.html dengan Template ID tersebut
-===========================================================================
--->

@@ -224,6 +224,11 @@
 
     @media (max-width: 600px) {
       .plan-radio-grid { grid-template-columns: 1fr; }
+      .hero-form { text-align: left; }
+      .hero-form .hero-content { align-items: flex-start; }
+      .hero-form .hero-text-wrapper,
+      .hero-form .hero-text { align-items: flex-start; text-align: left; }
+      .trust-badge { justify-content: flex-start; }
     }
   </style>
 </head>
@@ -465,7 +470,7 @@
           </div>
 
           <!-- Submit -->
-          <button type="submit" class="btn-primary-large" id="submitBtn">
+          <button type="submit" class="btn-primary-large" id="submitBtn" style="margin-top: 16px;">
             Send Order Form
           </button>
         </form>

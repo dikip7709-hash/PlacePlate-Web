@@ -197,9 +197,33 @@
       opacity: 0.6; cursor: not-allowed;
     }
 
+    /* ── Center layout override ── */
+    .hero-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 40px;
+      padding: 140px 24px 80px;
+    }
+    .hero-form .hero-content {
+      align-items: center;
+      max-width: 640px;
+      width: 100%;
+    }
+    .hero-form .hero-text-wrapper,
+    .hero-form .hero-text {
+      align-items: center;
+      text-align: center;
+    }
+    .form-container {
+      max-width: 640px;
+      width: 100%;
+    }
+    .trust-badge { justify-content: center; }
+
     @media (max-width: 600px) {
       .plan-radio-grid { grid-template-columns: 1fr; }
-      .hero-plan-grid  { grid-template-columns: 1fr; }
     }
   </style>
 </head>

@@ -492,20 +492,34 @@ function _initCatalogPagination() {
   next.addEventListener('click', function() { _showPage(_catalogState.currentPage + 1); });
 }
 
-function _initCatalogFilter() {
-  var filterBtns = document.querySelectorAll('.filter-btn');
+function _applyFilter(filter) {
   var allCards   = Array.from(document.querySelectorAll('.tpl-card'));
+  var filterBtns = document.querySelectorAll('.filter-btn');
+  var mobileSelect = document.getElementById('filterSelectMobile');
+  filterBtns.forEach(function(b) { b.classList.remove('active'); });
+  var activeBtn = document.querySelector('.filter-btn[data-filter="' + filter + '"]');
+  if (activeBtn) activeBtn.classList.add('active');
+  if (mobileSelect) mobileSelect.value = filter;
+  var matching = filter === 'all' ? allCards.slice() : allCards.filter(function(c) { return c.getAttribute('data-category') === filter; });
+  _showPage(1, matching);
+}
+
+function _initCatalogFilter() {
+  var filterBtns   = document.querySelectorAll('.filter-btn');
+  var mobileSelect = document.getElementById('filterSelectMobile');
   if (!filterBtns.length) return;
 
   filterBtns.forEach(function(btn) {
     btn.addEventListener('click', function() {
-      var filter = btn.getAttribute('data-filter');
-      filterBtns.forEach(function(b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      var matching = filter === 'all' ? allCards.slice() : allCards.filter(function(c) { return c.getAttribute('data-category') === filter; });
-      _showPage(1, matching);
+      _applyFilter(btn.getAttribute('data-filter'));
     });
   });
+
+  if (mobileSelect) {
+    mobileSelect.addEventListener('change', function() {
+      _applyFilter(mobileSelect.value);
+    });
+  }
 }
 
 function _initCatalogSort() {
@@ -590,6 +604,7 @@ function _initCatalogSearch() {
   input.addEventListener('keydown', function(e) {
     if (e.key === 'Enter' && input.value.trim()) {
       history.replaceState(null, '', '?q=' + encodeURIComponent(input.value.trim()));
+      input.blur();
     }
     if (e.key === 'Escape') _clearSearchResults();
   });
@@ -633,6 +648,12 @@ function initTemplateCatalog() {
   allCards.forEach(function(card) {
     card.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
   });
+
+  allCards.sort(function(a, b) {
+    return Number(a.getAttribute('data-order')) - Number(b.getAttribute('data-order'));
+  });
+  allCards.forEach(function(c) { grid.appendChild(c); });
+
   _catalogState.activeCards = allCards;
   _showPage(1);
   _initCatalogPagination();

@@ -595,6 +595,32 @@
     </section>
   </div>
 
+  <!-- ERROR NOTIFICATION OVERLAY -->
+  <div id="error-overlay" class="notification-overlay" role="dialog" aria-modal="true" aria-labelledby="errorTitle">
+    <div class="notification-container">
+      <div class="notification-card">
+        <div class="notification-content">
+          <div class="notification-icon" aria-hidden="true" style="color:#ff6b6b;">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+              <circle cx="32" cy="32" r="30" stroke="rgba(255,107,107,0.4)" stroke-width="2"/>
+              <circle cx="32" cy="32" r="30" stroke="#ff6b6b" stroke-width="2"/>
+              <path d="M22 22L42 42M42 22L22 42" stroke="#ff6b6b" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h2 class="notification-title" id="errorTitle">Failed to Send</h2>
+          <p class="notification-message">Something went wrong while sending your order. Please contact us directly.</p>
+          <p class="notification-submessage">
+            WhatsApp: <a href="https://wa.me/6285643456807" style="color:#00adb5;">+62 856-4345-6807</a><br>
+            Email: <a href="mailto:hello@placeplate.com" style="color:#00adb5;">hello@placeplate.com</a>
+          </p>
+          <div class="notification-actions">
+            <button class="btn-primary-large" onclick="document.getElementById('error-overlay').classList.remove('active');document.body.style.overflow=''">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- SUCCESS NOTIFICATION OVERLAY -->
   <div id="notification-overlay" class="notification-overlay" role="dialog" aria-modal="true" aria-labelledby="notifTitle">
     <div class="notification-container">
@@ -703,7 +729,8 @@
           if (overlay) { overlay.classList.add('active'); document.body.style.overflow = 'hidden'; }
         })
         .catch(function() {
-          alert('Failed to send. Please contact us via WhatsApp or email hello@placeplate.com');
+          var errOverlay = document.getElementById('error-overlay');
+          if (errOverlay) { errOverlay.classList.add('active'); document.body.style.overflow = 'hidden'; }
         })
         .finally(function() {
           btn.disabled    = false;

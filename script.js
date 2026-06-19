@@ -1,12 +1,5 @@
 function getTemplatesUrl(query) {
-  const anchor = document.querySelector('a[href*="templates-page.html"]');
-  if (anchor) {
-    const url = new URL(anchor.href);
-    if (query) url.searchParams.set('q', query);
-    return url.toString();
-  }
-
-  return 'pages/templates-page.html' + (query ? '?q=' + encodeURIComponent(query) : '');
+  return '/templates/' + (query ? '?q=' + encodeURIComponent(query) : '');
 }
 
 function animateCounter(element) {

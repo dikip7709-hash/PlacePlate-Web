@@ -1,9 +1,7 @@
 User-agent: *
 Allow: /
 
-# Block physical file directories (clean URLs are used instead)
-Disallow: /pages/
-Disallow: /blogs/
+# Legacy .html files — canonical tags point to clean URLs, noindex applied
 Disallow: /templates/*.html
 
 Sitemap: https://placeplate.com/sitemap.xml

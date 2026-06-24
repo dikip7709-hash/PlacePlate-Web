@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description" content="Share your feedback about PlacePlate's PowerPoint templates and presentation design service. Your opinion helps us improve." />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="PlacePlate feedback, review PowerPoint templates, customer review" />
+  <meta name="author" content="PlacePlate" />
+  <link rel="canonical" href="https://placeplate.com/feedback/" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Share Your Feedback | PlacePlate" />
+  <meta property="og:description" content="Share your feedback about PlacePlate's PowerPoint templates and presentation design service. Your opinion helps us improve." />
+  <meta property="og:image"       content="https://placeplate.com/img/Icon-PlacePlate.png" />
+  <meta property="og:url"         content="https://placeplate.com/feedback/" />
+  <meta property="og:site_name"   content="PlacePlate" />
+  <meta name="twitter:card"        content="summary" />
+  <meta name="twitter:title"       content="Feedback | PlacePlate" />
+  <meta name="twitter:description" content="Share your feedback about PlacePlate's PowerPoint templates and presentation design service." />
+  <meta name="twitter:image"       content="https://placeplate.com/img/Icon-PlacePlate.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+  <title>Share Your Feedback | PlacePlate</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/img/Icon-PlacePlate.png">
+  <link rel="icon" type="image/webp" href="/img/Icon-PlacePlate.webp">
+
+  <link rel="stylesheet" href="/style.css" />
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-89SC30WLB7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-89SC30WLB7');
+  </script>
+
+  <style>
+    .feedback-section {
+      padding: 60px 0 80px;
+    }
+    .feedback-container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .feedback-card {
+      background: #ffffff;
+      border-radius: 20px;
+      border: 1.5px solid rgba(0,62,65,0.08);
+      padding: 48px 48px 52px;
+      box-shadow: 0 4px 24px rgba(0,62,65,0.06);
+    }
+    @media (max-width: 600px) {
+      .feedback-card { padding: 32px 24px 36px; }
+    }
+    .feedback-form-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #003e41;
+      margin: 0 0 6px;
+    }
+    .feedback-form-subtitle {
+      font-size: 0.92rem;
+      color: #6b7280;
+      margin: 0 0 32px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #003e41;
+      margin-bottom: 6px;
+    }
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid rgba(0,62,65,0.15);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: #111827;
+      background: #f9fafb;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-sizing: border-box;
+      outline: none;
+    }
+    .form-input:focus,
+    .form-textarea:focus {
+      border-color: #00adb5;
+      box-shadow: 0 0 0 3px rgba(0,173,181,0.12);
+      background: #fff;
+    }
+    .form-textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+    .star-rating-wrap {
+      direction: rtl;
+      display: inline-flex;
+      gap: 4px;
+      margin-top: 4px;
+    }
+    .star-rating-wrap label {
+      font-size: 1.9rem;
+      color: #d1d5db;
+      cursor: pointer;
+      transition: color 0.15s;
+      line-height: 1;
+    }
+    .star-rating-wrap input[type="radio"] { display: none; }
+    .star-rating-wrap input[type="radio"]:checked ~ label,
+    .star-rating-wrap label:hover,
+    .star-rating-wrap label:hover ~ label {
+      color: #f59e0b;
+    }
+    .feedback-submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: #00adb5;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      margin-top: 8px;
+    }
+    .feedback-submit-btn:hover {
+      background: #009aa1;
+      transform: translateY(-1px);
+    }
+    .feedback-submit-btn:disabled {
+      background: #9ca3af;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .feedback-msg {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      display: none;
+    }
+    .feedback-msg.success {
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+    }
+    .feedback-msg.error {
+      background: #fef2f2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="page-container">
+
+    <!-- ========================================
+         NAVIGATION SECTION
+         Fixed header with logo and menu
+         ======================================== -->
+    <header class="header">
+      <nav class="nav-wrapper">
+        <!-- Logo -->
+        <div class="logo" onclick="location.href='/'">
+          <img class="logo-icon" src="/img/Untitled-1.png" alt="" />
+          <p class="logo-text">
+            <span class="logo-primary">Place</span><span class="logo-accent">Plate</span>
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="nav-menu">
+          <li class="nav-item-tpl">
+            <a href="/templates/" class="nav-link nav-link-tpl" data-i18n="nav_template">
+              Templates
+              <img class="tpl-arrow" src="/img/angle-down-solid-full (1).svg" alt="" style="width: 10px;height: 10px;" aria-hidden="true" />
+            </a>
+            <div class="tpl-dropdown" role="menu">
+              <div class="tpl-dropdown-inner">
+                <a href="/templates/" class="tpl-dd-item" role="menuitem">
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="2" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/><rect x="11" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/><rect x="2" y="11" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/><rect x="11" y="11" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/></svg>
+                  All Templates
+                </a>
+                <a href="/templates/?q=academic" class="tpl-dd-item" role="menuitem">
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2L2 7l8 5 8-5-8-5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M2 7v6M18 7v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M6 9.5v4a4 4 0 0 0 8 0v-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Best for Academic
+                </a>
+                <a href="/templates/?q=business" class="tpl-dd-item" role="menuitem">
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="2" y="7" width="16" height="11" rx="1.5" stroke="currentColor" stroke-width="1.7"/><path d="M7 7V5a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                  Best for Business
+                </a>
+                <a href="/templates/?q=package" class="tpl-dd-item" role="menuitem">
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7l7-4 7 4v9l-7 4-7-4V7z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M10 3v13M3 7l7 4 7-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Package
+                </a>
+              </div>
+            </div>
+          </li>
+          <li><a href="/service/" class="nav-link" data-i18n="nav_service">Services</a></li>
+          <li><a href="/about/" class="nav-link" data-i18n="nav_about">About</a></li>
+          <li><a href="/blog/" class="nav-link" data-i18n="nav_blog">Blogs</a></li>
+          <li><a href="/faq/" class="nav-link" data-i18n="nav_faq">FAQs</a></li>
+        </ul>
+
+        <!-- Inline Search + CTA -->
+        <div class="nav-right">
+          <div class="nav-search-wrap" id="navSearchWrap">
+            <svg class="nav-search-icon-inline" width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="8.5" cy="8.5" r="6" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M13 13L18.5 18.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <input
+              type="text"
+              class="nav-search-input-inline"
+              id="navSearchInline"
+              placeholder="Search templates..."
+              autocomplete="off"
+              spellcheck="false"
+              aria-label="Search templates"
+              aria-haspopup="listbox"
+            />
+            <div class="nav-search-popup" id="navSearchPopup" hidden role="listbox" aria-label="Popular searches">
+              <p class="popup-hints-label">Popular searches</p>
+              <div class="popup-hints-list">
+                <button class="popup-hint" data-query="business" role="option">Best For Business</button>
+                <button class="popup-hint" data-query="academic" role="option">Best For Academic</button>
+                <button class="popup-hint" data-query="pro-template" role="option">Pro Template</button>
+                <button class="popup-hint" data-query="package" role="option">Package</button>
+              </div>
+            </div>
+          </div>
+          <button class="btn-primary" onclick="location.href='/service/'" data-i18n="btn_book_call">
+            Book Call
+          </button>
+          <button class="btn-primary-menu" data-i18n="menu_btn">Menu</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ========================================
+         PAGE HERO
+         ======================================== -->
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span>Feedback</span>
+        </nav>
+        <div class="page-hero-text">
+          <span class="section-label">Your Voice Matters</span>
+          <h1 class="page-hero-title">
+            <span class="text-primary">Share Your </span>
+            <span class="text-accent">Feedback</span>
+          </h1>
+          <p class="page-hero-desc">We read every message. Whether it's a kind word, a suggestion, or something we can improve — your feedback helps us build better templates and a better experience for everyone.</p>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-num">3,000+</span>
+            <span class="hero-stat-label">Happy customers</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">24h</span>
+            <span class="hero-stat-label">Average response time</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">100%</span>
+            <span class="hero-stat-label">Satisfaction rate</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         FEEDBACK FORM SECTION
+         ======================================== -->
+    <section class="feedback-section">
+      <div class="feedback-container">
+        <div class="feedback-card">
+          <h2 class="feedback-form-title">Leave a Review</h2>
+          <p class="feedback-form-subtitle">Takes less than 2 minutes. No account needed.</p>
+
+          <form id="feedbackForm" novalidate>
+
+            <div class="form-group">
+              <label class="form-label" for="fb_name">Your Name</label>
+              <input class="form-input" type="text" id="fb_name" name="from_name" placeholder="e.g. John D." required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="fb_email">Email Address</label>
+              <input class="form-input" type="email" id="fb_email" name="from_email" placeholder="your@email.com" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Overall Rating</label>
+              <div class="star-rating-wrap" id="starRating">
+                <input type="radio" name="rating" id="star5" value="5" /><label for="star5">&#9733;</label>
+                <input type="radio" name="rating" id="star4" value="4" /><label for="star4">&#9733;</label>
+                <input type="radio" name="rating" id="star3" value="3" /><label for="star3">&#9733;</label>
+                <input type="radio" name="rating" id="star2" value="2" /><label for="star2">&#9733;</label>
+                <input type="radio" name="rating" id="star1" value="1" /><label for="star1">&#9733;</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="fb_message">Your Feedback</label>
+              <textarea class="form-textarea" id="fb_message" name="message" placeholder="Tell us about your experience — what you loved, what could be better, or anything else on your mind." required></textarea>
+            </div>
+
+            <button type="submit" class="feedback-submit-btn" id="feedbackSubmitBtn">Send Feedback</button>
+
+            <div class="feedback-msg success" id="feedbackSuccess">
+              Thank you! Your feedback has been sent. We truly appreciate you taking the time. &#10084;
+            </div>
+            <div class="feedback-msg error" id="feedbackError">
+              Something went wrong. Please try again or email us at <a href="mailto:helo@placeplate.com">helo@placeplate.com</a>.
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER CTA
+         ======================================== -->
+    <section class="footer-cta">
+      <div class="footer-cta-content">
+        <div class="trust-badge trust-badge-white">
+          <div class="stars">
+            <img class="star" src="/img/Star 4.svg" alt="Star rating" />
+            <img class="star" src="/img/Star 4.svg" alt="Star rating" />
+            <img class="star" src="/img/Star 4.svg" alt="Star rating" />
+            <img class="star" src="/img/Star 4.svg" alt="Star rating" />
+            <img class="star" src="/img/Star 5 setengah.svg" alt="Half star rating" />
+          </div>
+          <p class="trust-text">Trusted by 3,000+ clients &amp; customers</p>
+        </div>
+        <div class="footer-cta-text">
+          <h2 class="footer-cta-headline">
+            <span class="text-primary">Ready to </span>
+            <span class="text-accent">Transform</span>
+            <span class="text-primary"> Your Presentation?</span>
+          </h2>
+          <p class="footer-cta-subheadline">Professional PowerPoint templates and custom presentations designed to help you speak clearly, look credible, and leave a lasting impression.</p>
+        </div>
+        <div class="footer-cta-buttons">
+          <button class="btn-primary-large" onclick="location.href='/service/'">Custom Presentation</button>
+          <button class="btn-secondary-large" onclick="location.href='/templates/'">Get Template</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+         Site footer with links and info
+         ======================================== -->
+    <footer class="footer" id="contact">
+      <div class="footer-content">
+
+        <!-- Footer Top: Links -->
+        <div class="footer-top">
+
+          <!-- Brand Column -->
+          <div class="footer-brand">
+            <p class="brand-name">
+              <span class="brand-primary">PLACE</span><span class="brand-accent">PLATE</span>
+            </p>
+            <p class="brand-tagline" data-i18n="footer_tagline">Best PowerPoint Morph</p>
+          </div>
+
+          <!-- Footer Navigation -->
+          <nav class="footer-nav">
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+              <h3 class="footer-col-title" data-i18n="footer_templates">Templates</h3>
+              <ul class="footer-links">
+                <li><a href="/templates/">All Template</a></li>
+                <li><a href="/templates/">Best For Academic</a></li>
+                <li><a href="/templates/">Best For Business</a></li>
+                <li><a href="/templates/">Package</a></li>
+              </ul>
+            </div>
+
+            <!-- Service Links -->
+            <div class="footer-col">
+              <h3 class="footer-col-title">Company</h3>
+              <ul class="footer-links">
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/service/">Custom Service</a></li>
+              </ul>
+            </div>
+
+            <!-- Support Links -->
+            <div class="footer-col">
+              <h3 class="footer-col-title" data-i18n="footer_col3">Support</h3>
+              <ul class="footer-links">
+                <li>
+                  <a href="https://wa.me/placeplate" target="_blank" rel="noopener noreferrer" data-i18n="fl_whatsapp">
+                    WhatsApp Support
+                  </a>
+                </li>
+                <li><a href="mailto:helo@placeplate.com" data-i18n="fl_email">Email Support</a></li>
+                <li><a href="/faq/" data-i18n="fl_faqs">FAQs</a></li>
+                <li><a href="/feedback/">Feedback</a></li>
+              </ul>
+            </div>
+
+            <!-- Social Links -->
+            <div class="footer-col">
+              <h3 class="footer-col-title" data-i18n="footer_col4">Follow Us</h3>
+              <ul class="footer-links">
+                <li>
+                  <a href="https://www.instagram.com/placeplate12345" target="_blank" rel="noopener noreferrer">
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.tiktok.com/@placeplate" target="_blank" rel="noopener noreferrer">
+                    TikTok
+                  </a>
+                </li>
+                <li>
+                  <a href="https://pin.it/5k25Rz30j" target="_blank" rel="noopener noreferrer">
+                    Pinterest
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/place_plate543" target="_blank" rel="noopener noreferrer">
+                    Twitter/X
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/share/1XcLVdv7DA" target="_blank" rel="noopener noreferrer">
+                    Facebook
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </nav>
+
+        </div>
+
+        <!-- Footer Bottom: Copyright -->
+        <div class="footer-bottom">
+          <div class="copyright">
+            <p class="copyright" data-i18n="copyright">&#169; 2025 Place Plate &#8211; All Rights Reserved</p>
+            <ul class="policy">
+              <li><a href="/privacy-policy/" data-i18n="policy_privacy">Privacy Policy</a></li>
+              <li><a href="/term-of-service/" data-i18n="policy_terms">Terms of Service</a></li>
+              <li><a href="/refund-policy/" data-i18n="policy_refund">Refund Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div><!-- end .page-container -->
+
+  <!-- EmailJS Init & Form Handler -->
+  <script>
+    (function () {
+      emailjs.init({ publicKey: 'QsPsXnOnsIIDDrkCm' });
+
+      var form       = document.getElementById('feedbackForm');
+      var btn        = document.getElementById('feedbackSubmitBtn');
+      var successMsg = document.getElementById('feedbackSuccess');
+      var errorMsg   = document.getElementById('feedbackError');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var name     = document.getElementById('fb_name').value.trim();
+        var email    = document.getElementById('fb_email').value.trim();
+        var message  = document.getElementById('fb_message').value.trim();
+        var ratingEl = document.querySelector('input[name="rating"]:checked');
+        var rating   = ratingEl ? ratingEl.value + ' stars' : 'Not rated';
+
+        if (!name || !email || !message) {
+          errorMsg.textContent     = 'Please fill in your name, email, and feedback before submitting.';
+          errorMsg.style.display   = 'block';
+          successMsg.style.display = 'none';
+          return;
+        }
+
+        btn.disabled    = true;
+        btn.textContent = 'Sending...';
+        successMsg.style.display = 'none';
+        errorMsg.style.display   = 'none';
+
+        emailjs.send('service_ehuqs3n', 'template_nx8hai6', {
+          from_name:  name,
+          from_email: email,
+          rating:     rating,
+          message:    message
+        }).then(function () {
+          btn.textContent          = 'Feedback Sent!';
+          successMsg.style.display = 'block';
+          form.reset();
+        }, function () {
+          btn.disabled    = false;
+          btn.textContent = 'Send Feedback';
+          errorMsg.textContent   = 'Something went wrong. Please try again or email us at helo@placeplate.com.';
+          errorMsg.style.display = 'block';
+        });
+      });
+    })();
+  </script>
+
+  <!-- Shared nav & mobile menu script -->
+  <script src="/script.js"></script>
+
+</body>
+</html>

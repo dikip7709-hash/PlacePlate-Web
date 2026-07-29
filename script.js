@@ -766,6 +766,23 @@ function initProductPage() {
     });
   });
 
+  var aboutToggle = document.getElementById('aboutToggle');
+  var aboutBody   = document.getElementById('aboutCollapsible');
+  if (aboutToggle && aboutBody) {
+    aboutToggle.addEventListener('click', function() {
+      var expanded = !aboutBody.classList.contains('expanded');
+      aboutBody.classList.toggle('expanded', expanded);
+      aboutBody.style.maxHeight = expanded ? aboutBody.scrollHeight + 'px' : '0px';
+      aboutToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      aboutToggle.querySelector('.about-toggle-label').textContent = expanded ? 'Show Less' : 'Show More Details';
+    });
+    window.addEventListener('resize', function() {
+      if (aboutBody.classList.contains('expanded')) {
+        aboutBody.style.maxHeight = aboutBody.scrollHeight + 'px';
+      }
+    });
+  }
+
   var overlay  = document.getElementById('paymentOverlay');
   if (!overlay) return;
   var closeBtn = document.getElementById('paymentClose');

@@ -316,23 +316,26 @@ function initBlogCardAnimation() {
 
 function initFaqAccordion() {
 
-  const tabs   = document.querySelectorAll('.faq-tab');
-  const groups = document.querySelectorAll('.faq-group');
-  if (!tabs.length || !groups.length) return;
+  const tabs      = document.querySelectorAll('.faq-tab');
+  const groups    = document.querySelectorAll('.faq-group');
+  const questions = document.querySelectorAll('.faq-question');
+  if (!questions.length) return;
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
+  if (tabs.length && groups.length) {
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
 
-      const target = tab.dataset.tab;
-      groups.forEach(group => {
-        group.classList.toggle('hidden', group.dataset.group !== target);
+        const target = tab.dataset.tab;
+        groups.forEach(group => {
+          group.classList.toggle('hidden', group.dataset.group !== target);
+        });
       });
     });
-  });
+  }
 
-  document.querySelectorAll('.faq-question').forEach(btn => {
+  questions.forEach(btn => {
     btn.addEventListener('click', () => {
       const item = btn.closest('.faq-item');
       if (!item) return;

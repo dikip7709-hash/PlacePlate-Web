@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
 
-# Legacy .html files — canonical tags point to clean URLs, noindex applied
-Disallow: /templates/*.html
-
 Sitemap: https://placeplate.com/sitemap.xml

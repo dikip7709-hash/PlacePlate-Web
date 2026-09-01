@@ -1219,6 +1219,29 @@ p {
   border:1.5px solid rgba(0,62,65,0.07);
   transition:box-shadow 0.3s ease,border-color 0.3s
 }
+.section-product-testimonials {
+  background:#f9f9f9;
+  padding:64px 0
+}
+.product-testimonials-inner {
+  width:90%;
+  max-width:1300px;
+  margin:0 auto
+}
+.product-testimonials-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px
+}
+.product-testimonials-grid .testimonial-card {
+  width:100%;
+  flex:none
+}
+@media (max-width:900px) {
+  .product-testimonials-grid {
+  grid-template-columns:1fr
+}
+}
 .testimonial-card:hover {
   box-shadow:0 12px 36px rgba(0,62,65,0.1);
   border-color:rgba(0,173,181,0.25)
